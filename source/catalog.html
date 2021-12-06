@@ -42,17 +42,21 @@
     </nav>
   </header>
   <main class="page-main">
-    <h1 class="main-title">Каталог товаров</h1>
+    <div class="main-title-wrapper">
+      <h1 class="main-title-wrapper__main-title">Каталог товаров</h1>
+    </div>
     <section class="catalog">
       <h2 class="visually-hidden">Товары магазина «Мишка».</h2>
       <ul class="catalog-list">
         <li class="catalog-list__item card">
           <a class="card__link" href="#">
             <img class="card__image" src="img/catalog/rabbit.jpg" alt="Вязаный бежево-голубой зайчик с глазками.">
+          </a>
+          <a class="card__link" href="#">
             <h3 class="card__title">Зайчик-попрыгайчик</h3>
           </a>
           <p class="card__parameters">Рост 30 см, вес 200 г</p>
-          <span class="card__price">1 200 руб.</span>
+          <p class="card__price">1 200 руб.</p>
           <button class="card__button" type="button">
             <span class="visually-hidden">Положить товар Зайчик-попрыгайчик в корзину.</span>
           </button>
@@ -60,10 +64,12 @@
         <li class="catalog-list__item card">
           <a class="card__link" href="#">
             <img class="card__image" src="img/catalog/basket.jpg" alt="Вязаная корзина для белья, верхняя половина - белая, нижняя - оранжевая.">
+          </a>
+          <a class="card__link" href="#">
             <h3 class="card__title">Корзинка для белья</h3>
           </a>
           <p class="card__parameters">Диаметр 15 см, высота 10 см</p>
-          <span class="card__price">690 руб.</span>
+          <p class="card__price">690 руб.</p>
           <button class="card__button" type="button">
             <span class="visually-hidden">Положить товар Корзинка для белья в корзину.</span>
           </button>
@@ -71,10 +77,12 @@
         <li class="catalog-list__item card">
           <a class="card__link" href="#">
             <img class="card__image" src="img/catalog/big-basket.jpg" alt="Большая вязаная корзина для игрушек, верхняя треть - белая, остальная часть - зеленая.">
+          </a>
+          <a class="card__link" href="#">
             <h3 class="card__title">Большая корзинка для игрушек</h3>
           </a>
           <p class="card__parameters">Диаметр 30 см, высота 30 см</p>
-          <span class="card__price">1 500 руб.</span>
+          <p class="card__price">1 500 руб.</p>
           <button class="card__button" type="button">
             <span class="visually-hidden">Положить товар Большая корзинка для белья в корзину.</span>
           </button>
@@ -82,8 +90,8 @@
       </ul>
     </section>
     <section class="video">
-      <h2 class="video__title">Производство</h2>
-      <video class="video__container" poster="img/video/video.jpg" preload="metadata" width="260" height="150">
+      <h2 class="video__title">Процесс производства</h2>
+      <video class="video-container" poster="img/video/video.jpg" preload="metadata" width="260" height="150">
         <source src="#" type="video/mp4">
         <source src="#" type="video/ogg">
         <source src="#" type="video/webm">

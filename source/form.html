@@ -42,12 +42,14 @@
     </nav>
   </header>
   <main class="page-main">
-    <h1 class="main-title">Вязание на заказ</h1>
+    <div class="main-title-wrapper">
+      <h1 class="main-title-wrapper__main-title">Вязание на заказ</h1>
+    </div>
+    <p class="page-main__description">
+      Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с
+      вами, чтобы уточнить детали.
+    </p>
     <form class="form" action="https://echo.htmlacademy.ru/" method="get">
-      <p class="form__description">
-        Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с
-        вами, чтобы уточнить детали.
-      </p>
       <fieldset class="form__group">
         <legend class="form__legend">Тип</legend>
         <input class="form__input form__input--radio" type="radio" name="accessory"
@@ -81,38 +83,32 @@
       <fieldset class="form__group">
         <legend class="form__legend">ФИО</legend>
         <label class="form__label" for="name">Имя:</label>
-        <input class="form__input form__input--line" type="text" name="name" id="name"
+        <input class="form__input" type="text" name="name" id="name"
         placeholder="Введите ваше имя*" required>
         <label class="form__label" for="surname">Фамилия:</label>
-        <input class="form__input form__input--line" type="text" name="surname" id="surname"
+        <input class="form__input" type="text" name="surname" id="surname"
         placeholder="Укажите фамилию*" required>
         <label class="form__label" for="patronymic">Отчество:</label>
-        <input class="form__input form__input--line" type="text" name="patronymic" id="patronymic"
+        <input class="form__input" type="text" name="patronymic" id="patronymic"
         placeholder="Отчество, если желаете">
       </fieldset>
-      <fieldset class="form__group">
-        <legend class="form__legend">Тел</legend>
-        <!-- Не подписывала здесь label, т.к. скринридер 2 раза повторит - уже есть название поля в legend -->
-        <label class="form__label form__label--outer" for="tel">
-          <input class="form__input form__input--line" type="tel" name="tel" id="tel"
-          placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
-        </label>
-      </fieldset>
-      <fieldset class="form__group">
-        <legend class="form__legend">E-mail</legend>
-        <!-- Не подписывала здесь label, т.к. скринридер 2 раза повторит - уже есть название поля в legend -->
-        <label class="form__label form__label--outer" for="email">
-          <input class="form__input form__input--line" type="email" name="email" id="email"
-          placeholder="Ваш Email*" required>
-        </label>
-      </fieldset>
-      <fieldset class="form__group">
-        <legend class="form__legend">Доп</legend>
-        <label class="visually-hidden" for="message">Сообщение.</label>
-        <input class="form__input form__input--message" type="text" name="message" id="message"
-        placeholder="Опишите все ваши пожелания к заказу">
-      </fieldset>
-      <span class="form__note">*Поля обязательны для заполнения</span>
+      <legend class="form__legend">Тел</legend>
+      <!-- Не подписывала здесь label, т.к. скринридер 2 раза повторит - уже есть название поля в legend -->
+      <label class="form__label form__label--outer" for="tel">
+        <input class="form__input" type="tel" name="tel" id="tel"
+        placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
+      </label>
+      <legend class="form__legend">E-mail</legend>
+      <!-- Не подписывала здесь label, т.к. скринридер 2 раза повторит - уже есть название поля в legend -->
+      <label class="form__label form__label--outer" for="email">
+        <input class="form__input" type="email" name="email" id="email"
+        placeholder="Ваш Email*" required>
+      </label>
+      <legend class="form__legend">Доп</legend>
+      <label class="visually-hidden" for="message">Сообщение.</label>
+      <textarea class="form__input form__input--message" name="message" id="message"
+      placeholder="Опишите все ваши пожелания к заказу"></textarea>
+      <p class="form__note">*Поля обязательны для заполнения</p>
       <button class="button" type="submit">ОТПРАВИТЬ ЗАКАЗ</button>
     </form>
   </main>
