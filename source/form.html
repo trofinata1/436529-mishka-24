@@ -69,7 +69,7 @@
         <label class="form__label" for="gray-color">Серый</label>
         <input class="form__input form__input--checkbox" type="checkbox" name="tiffany"
         id="tiffany-color">
-        <label class="form__label" for="tiffany-color">«Тиффани»</label>
+        <label class="form__label" for="tiffany-color">Тиффани</label>
         <input class="form__input form__input--checkbox" type="checkbox" name="black"
         id="black-color">
         <label class="form__label" for="black-color">Черный</label>
@@ -92,20 +92,13 @@
         <input class="form__input" type="text" name="patronymic" id="patronymic"
         placeholder="Отчество, если желаете">
       </fieldset>
-      <legend class="form__legend">Тел</legend>
-      <!-- Не подписывала здесь label, т.к. скринридер 2 раза повторит - уже есть название поля в legend -->
-      <label class="form__label form__label--outer" for="tel">
-        <input class="form__input" type="tel" name="tel" id="tel"
-        placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
-      </label>
-      <legend class="form__legend">E-mail</legend>
-      <!-- Не подписывала здесь label, т.к. скринридер 2 раза повторит - уже есть название поля в legend -->
-      <label class="form__label form__label--outer" for="email">
-        <input class="form__input" type="email" name="email" id="email"
-        placeholder="Ваш Email*" required>
-      </label>
-      <legend class="form__legend">Доп</legend>
-      <label class="visually-hidden" for="message">Сообщение.</label>
+      <label class="form__label form__label--color" for="tel">Тел</label>
+      <input class="form__input" type="tel" name="tel" id="tel"
+      placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
+      <label class="form__label form__label--color" for="email">E-mail</Label>
+      <input class="form__input" type="email" name="email" id="email"
+      placeholder="Ваш Email*" required>
+      <label class="form__label form__label--color" for="message">Доп</label>
       <textarea class="form__input form__input--message" name="message" id="message"
       placeholder="Опишите все ваши пожелания к заказу"></textarea>
       <p class="form__note">*Поля обязательны для заполнения</p>
