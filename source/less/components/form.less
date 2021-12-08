@@ -1,0 +1,59 @@
+.form__label {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 18px;
+  color: @dark-font-color;
+
+  &--modal {
+    line-height: 16px;
+  }
+}
+
+.form__button {
+  font-size: 17px;
+  line-height: 16px;
+
+  &--modal {
+    color: @opposite-font-color;
+    background-color: @special-color;
+  }
+}
+
+.form__group {
+  padding: 0;
+}
+
+.form__legend {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: @special-color;
+}
+
+.form__input {
+  background-position: right;
+  background-repeat: no-repeat;
+
+  &::placeholder {
+    font-family: "Open Sans", Arial, sans-serif;
+    font-size: 17px;
+    line-height: 18px;
+    opacity: 0.3;
+  }
+
+  &--tel {
+    background-image: url("../img/form/phone.svg");
+  }
+
+  &--email {
+    background-image: url("../img/form/mail.svg");
+  }
+}
+
+.form__note {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+
