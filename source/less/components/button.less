@@ -1,16 +1,26 @@
 .button {
   display: block;
-  font-family: @font-base;
+  font-family: @main;
   font-weight: 700;
   font-size: 18px;
   line-height: 20px;
   text-transform: uppercase;
   text-decoration: none;
-  color: @font-color-base;
+  color: @font-base;
   background-color: transparent;
   cursor: pointer;
 
   &--narrow {
     line-height: 16px;
+  }
+
+  &:hover {
+    color: @font-opposite;
+    .button-interaction;
+  }
+
+  &:active {
+    color: @font-opposite-active;
+    .button-interaction;
   }
 }

@@ -1,16 +1,4 @@
-.contacts {
-  padding-top: 38px;
-  padding-bottom: 39px;
-}
-
-.contacts__title {
-  padding-right: 30px;
-  padding-left: 30px;
-}
-
 .contacts__item {
-  padding-right: 30px;
-  padding-left: 30px;
   font-size: 14px;
   line-height: 30px;
 }
@@ -21,5 +9,13 @@
 
 .contacts__email {
   text-decoration: none;
-  color: @font-color-base;
+  color: @font-base;
+
+  &:hover {
+    color: @special-link-interaction;
+  }
+
+  &:active {
+    color: @special-link-interaction-active;
+  }
 }

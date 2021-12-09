@@ -1,7 +1,21 @@
+.copyright {
+  &:hover .copyright__icon {
+    fill: @special-link-interaction;
+  }
+
+  &:active .copyright__icon {
+    fill: @special-link-interaction-active;
+  }
+}
+
 .copyright__text {
   margin: 0;
   font-weight: 700;
   font-size: 19px;
   line-height: 18px;
-  color: @font-color-dark;
+  color: @font-dark;
+}
+
+.copyright__icon {
+  fill: @special;
 }

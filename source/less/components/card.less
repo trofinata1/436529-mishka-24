@@ -5,11 +5,11 @@
 .card__title {
   margin: 0;
   font-size: 17px;
-  color: @font-color-dark;
+  color: @font-dark;
 }
 
 .card__image {
-  background-color: @bg-color-gray;
+  background-color: @bg-gray;
 }
 
 .card__parameters {
@@ -19,9 +19,23 @@
 }
 
 .card__price {
-  color: @font-color-dark;
+  margin: 0;
+  padding: 0;
+  color: @font-dark;
 }
 
 .card__button {
-  cursor: pointer;
+  .reset-button;
+
+  &:hover .card__button-icon {
+    .icon-hover;
+  }
+
+  &:active .card__button-icon {
+    .icon-active;
+  }
+}
+
+.card__button-icon {
+  opacity: 0.2;
 }
