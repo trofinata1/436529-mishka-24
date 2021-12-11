@@ -1,18 +1,36 @@
 .search {
+  // БУДЕТ НАЧИНАЯ С 768px
+  // display: flex;
+  // flex-direction: row-reverse;
+  // justify-content: flex-end;
+  // align-items: center;
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
   color: @font-dark;
+
+  &:hover {
+    .search__icon {
+      .icon-hover;
+    }
+  }
+
+  &:active {
+    .search__icon {
+      .icon-active;
+    }
+  }
 }
 
 .search__icon {
   opacity: 0.2;
+}
 
-  &:hover {
-    .icon-hover;
-  }
-
-  &:active {
-    .icon-active;
+.search__input {
+  &:focus {
+    ~.search__icon {
+      fill: @special;
+      opacity: 1;
+    }
   }
 }

@@ -1,19 +1,31 @@
-.copyright {
-  &:hover .copyright__icon {
-    fill: @special-link-interaction;
-  }
-
-  &:active .copyright__icon {
-    fill: @special-link-interaction-active;
-  }
-}
-
 .copyright__text {
   margin: 0;
   font-weight: 700;
   font-size: 19px;
   line-height: 18px;
   color: @font-dark;
+}
+
+.copyright__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    .copyright__icon {
+      fill: @special-link-interaction;
+    }
+  }
+
+  &:focus {
+    .outline-radius;
+  }
+
+  &:active {
+    .copyright__icon {
+      fill: @special-link-interaction-active;
+    }
+  }
 }
 
 .copyright__icon {

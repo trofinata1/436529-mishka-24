@@ -1,14 +1,20 @@
 .button {
   display: block;
-  font-family: @main;
+  align-items: stretch;
+  padding: 0;
+  font-family: @font-family-main;
   font-weight: 700;
   font-size: 18px;
   line-height: 20px;
+  text-align: left;
   text-transform: uppercase;
   text-decoration: none;
   color: @font-base;
   background-color: transparent;
+  border: 2px solid @font-base;
   cursor: pointer;
+  outline: transparent;
+  appearance: none;
 
   &--narrow {
     line-height: 16px;
@@ -19,8 +25,35 @@
     .button-interaction;
   }
 
+  &:focus {
+    border-color: @special;
+  }
+
   &:active {
     color: @font-opposite-active;
     .button-interaction;
+  }
+
+  &--color {
+    color: @font-opposite;
+    background-color: @special;
+    border: none;
+
+    &:hover {
+      background-image: none;
+      background-color: @special-link-interaction;
+      border: none;
+    }
+
+    &:focus {
+      outline: 2px solid @font-base;
+      color: @font-opposite;
+    }
+
+    &:active {
+      background-image: none;
+      background-color: @special-active;
+      border: none;
+    }
   }
 }

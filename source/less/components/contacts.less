@@ -8,14 +8,43 @@
 }
 
 .contacts__email {
+  position: relative;
   text-decoration: none;
   color: @font-base;
 
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -3px;
+    left: 0;
+    height: 1px;
+    background-color: @special-decoration;
+  }
+
   &:hover {
     color: @special-link-interaction;
+
+    &::after {
+      color: @special-link-interaction;
+    }
+  }
+
+  &:focus {
+    .outline-radius;
+    color: @special;
+
+    &::after {
+      display: none;
+    }
   }
 
   &:active {
     color: @special-link-interaction-active;
+
+    &::after {
+      color: @special-link-interaction;
+      opacity: 0.1;
+    }
   }
 }

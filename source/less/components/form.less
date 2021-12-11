@@ -12,11 +12,6 @@
 .form__button {
   font-size: 17px;
   line-height: 16px;
-
-  &--modal {
-    color: @font-opposite;
-    background-color: @special;
-  }
 }
 
 .form__group {
@@ -32,13 +27,13 @@
 }
 
 .form__input {
-  font-family: @main;
+  font-family: @font-family-main;
   font-size: 19px;
   line-height: 18px;
   color: @font-base;
 
   &::placeholder {
-    font-family: "Open Sans", "Arial", sans-serif;
+    font-family: @font-family-main;
     font-size: 17px;
     line-height: 18px;
     opacity: 0.3;

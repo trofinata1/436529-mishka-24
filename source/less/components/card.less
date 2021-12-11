@@ -1,4 +1,5 @@
 .card__link {
+  display: block;
   text-decoration: none;
 }
 
@@ -27,12 +28,25 @@
 .card__button {
   .reset-button;
 
-  &:hover .card__button-icon {
-    .icon-hover;
+  &:hover {
+    .card__button-icon {
+      .icon-hover;
+      opacity: 1;
+    }
   }
 
-  &:active .card__button-icon {
-    .icon-active;
+  &:focus {
+    .outline-radius;
+
+    .card__button-icon {
+      .icon-hover;
+    }
+  }
+
+  &:active {
+    .card__button-icon {
+      .icon-active;
+    }
   }
 }
 
