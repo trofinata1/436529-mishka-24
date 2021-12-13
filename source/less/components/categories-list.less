@@ -1,0 +1,28 @@
+.categories-list {
+  .reset-list;
+}
+
+.categories-list__item {
+  background-position: center right 30px;
+  background-repeat: no-repeat;
+
+  &--interior {
+    background-image: url("../img/categories/interior.svg");
+    background-color: @special;
+  }
+
+  &--toys {
+    background-image: url("../img/categories/toy.svg");
+    background-color: @category-toys;
+  }
+}
+
+.categories-list__link {
+  display: block;
+  width: 100%;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 24px;
+  color: @font-opposite;
+  text-decoration: none;
+}

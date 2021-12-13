@@ -1,0 +1,41 @@
+.wave {
+  background-image: url("../img/decorations/wave.svg");
+  background-position: bottom;
+  background-repeat: repeat-x;
+}
+
+.reset-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.reset-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.button-interaction {
+  background-image: linear-gradient(0deg, @font-base, @font-base);
+  border: 2px solid @font-base;
+}
+
+.icon-hover {
+  fill: @special;
+  opacity: 1;
+}
+
+.icon-active {
+  fill: @special-active;
+  opacity: 1;
+}
+
+.outline {
+  outline: 2px solid @special;
+}
+
+.outline-radius {
+  .outline;
+  border-radius: 10px;
+}

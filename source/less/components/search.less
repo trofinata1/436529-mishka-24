@@ -1,0 +1,29 @@
+.search {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+  color: @font-dark;
+
+  &:hover {
+    .search__icon {
+      .icon-hover;
+    }
+  }
+
+  &:focus {
+    .search__icon {
+      fill: @special;
+      opacity: 1;
+    }
+  }
+
+  &:active {
+    .search__icon {
+      .icon-active;
+    }
+  }
+}
+
+.search__icon {
+  opacity: 0.2;
+}

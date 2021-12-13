@@ -1,0 +1,55 @@
+.card__link {
+  display: block;
+  text-decoration: none;
+}
+
+.card__title {
+  margin: 0;
+  font-size: 17px;
+  color: @font-dark;
+}
+
+.card__image {
+  background-color: @bg-gray;
+}
+
+.card__parameters {
+  margin: 0;
+  font-size: 13px;
+  line-height: 30px;
+}
+
+.card__price {
+  margin: 0;
+  padding: 0;
+  color: @font-dark;
+}
+
+.card__button {
+  .reset-button;
+
+  &:hover {
+    .card__button-icon {
+      .icon-hover;
+      opacity: 1;
+    }
+  }
+
+  &:focus {
+    .outline-radius;
+
+    .card__button-icon {
+      .icon-hover;
+    }
+  }
+
+  &:active {
+    .card__button-icon {
+      .icon-active;
+    }
+  }
+}
+
+.card__button-icon {
+  opacity: 0.2;
+}
