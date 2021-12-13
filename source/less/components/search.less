@@ -1,9 +1,4 @@
 .search {
-  // БУДЕТ НАЧИНАЯ С 768px
-  // display: flex;
-  // flex-direction: row-reverse;
-  // justify-content: flex-end;
-  // align-items: center;
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
@@ -12,6 +7,13 @@
   &:hover {
     .search__icon {
       .icon-hover;
+    }
+  }
+
+  &:focus {
+    .search__icon {
+      fill: @special;
+      opacity: 1;
     }
   }
 
@@ -24,13 +26,4 @@
 
 .search__icon {
   opacity: 0.2;
-}
-
-.search__input {
-  &:focus {
-    ~.search__icon {
-      fill: @special;
-      opacity: 1;
-    }
-  }
 }
