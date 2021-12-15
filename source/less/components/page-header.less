@@ -1,10 +1,15 @@
 .page-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
+  min-height: 79px;
+  .shadow;
 }
 
 .page-header__logo {
+  position: absolute;
+  top: 50%;
+  left: 118px;
+  transform: translateY(-50%);
+
   &:hover {
     opacity: 0.6;
   }
@@ -16,5 +21,17 @@
 
   &:active {
     opacity: 0.3;
+  }
+
+  @media (min-width: 768px) {
+    top: 22px;
+    left: 48px;
+    margin: 0;
+    transform: none;
+  }
+
+  @media (min-width: 1150px) {
+    left: 50%;
+    margin-left: -74.5px; //подвинула сразу на половину ширины того лого, который будет на десктопе
   }
 }

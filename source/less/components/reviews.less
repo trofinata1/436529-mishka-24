@@ -1,8 +1,149 @@
 .reviews {
   .wave;
+
+  @media (min-width: 768px) {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    background-image: url("../img/bg/bg-review.png"),
+      url("../img/decorations/wave.svg");
+    background-position: left,
+      bottom;
+    background-repeat: no-repeat,
+      repeat-x;
+  }
 }
 
-.reviews__arrows-prev,
-.reviews__arrows-next {
+.reviews__title {
+  @media (min-width: 768px) {
+    align-self: end;
+  }
+}
+
+.reviews__arrows {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  @media (min-width: 768px) {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 137px;
+  }
+}
+
+.reviews__arrow {
   .reset-button;
+  min-width: 50%;
+  border: 1px solid @line-separator;
+
+  &:hover {
+    background-image: none;
+    border: 1px solid @line-separator;
+
+    .reviews__arrow-icon {
+      opacity: 0.6;
+    }
+
+    @media (min-width: 768px) {
+      border: none;
+    }
+  }
+
+  &:focus {
+    .reviews__arrow-icon {
+      opacity: 0.6;
+    }
+  }
+
+  &:active {
+    background-image: none;
+    border: 1px solid @line-separator;
+
+    .reviews__arrow-icon {
+      opacity: 0.3;
+    }
+
+    @media (min-width: 768px) {
+      border: none;
+    }
+  }
+
+  @media (min-width: 768px) {
+    border: none;
+  }
+}
+
+.reviews__arrow-prev {
+  border-right: none;
+}
+
+.reviews__arrow-icon {
+  position: relative;
+  width: 50px;
+  height: 4px;
+  background-color: @font-dark;
+
+  &--left {
+    &::before {
+      content: "";
+      position: absolute;
+      left: -3px;
+      top: -5px;
+      width: 18px;
+      height: 4px;
+      background-color: @font-dark;
+      transform: rotate(-45deg);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: -3px;
+      top: 5px;
+      width: 18px;
+      height: 4px;
+      background-color: @font-dark;
+      transform: rotate(45deg);
+    }
+  }
+
+  &--right {
+    &::before {
+      content: "";
+      position: absolute;
+      right: -3px;
+      top: -5px;
+      width: 18px;
+      height: 4px;
+      background-color: @font-dark;
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: -3px;
+      top: 5px;
+      width: 18px;
+      height: 4px;
+      background-color: @font-dark;
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.reviews__button {
+  margin: 0 auto;
+  
+  @media (min-width: 768px) {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    justify-self: end;
+    align-self: start;
+  }
 }

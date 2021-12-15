@@ -1,0 +1,17 @@
+.categories {
+  @media (min-width: 768px) {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 24px;
+      right: 0;
+      bottom: -12px;
+      left: 0;
+      background-image: url("../img/decorations/wave-wide.svg");
+      z-index: 1;
+    }
+  }
+}

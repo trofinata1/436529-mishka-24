@@ -1,7 +1,111 @@
 .main-nav {
+  // position: absolute; //задать при нажатии на кнопку, вызывающую меню
+  top: 79px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
   background-color: @font-opposite;
+
+  @media (min-width: 768px) {
+    display: grid;
+    grid-template-columns: 48% 1fr 39%;
+    grid-template-rows: 88px 1px 1fr; //высота ячеек в пикселях пока временно, чтобы смотреть удобнее было, потом уберу
+    align-items: center;
+  }
+
+  @media (min-width: 1150px) {
+    grid-template-columns: 67% 1fr 25%;
+  }
 }
 
 .main-nav__toggle {
+  position: absolute; //Относительно page-header
+  top: 41px;
+  right: 31px;
   .reset-button;
+  padding: 0;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.main-nav__mark {
+  position: relative;
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: @toggle;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    right: 0;
+    left: 0;
+    height: 2px;
+    background-color: @toggle;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 4px;
+    right: 0;
+    left: 0;
+    height: 2px;
+    background-color: @toggle;
+  }
+}
+
+.main-nav__list {
+  width: 100%;
+
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
+
+  @media (min-width: 1150px) {
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+}
+
+.main-nav__offer {
+  display: none;
+  margin: 0;
+
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
+}
+
+.main-nav__separator {
+  display: none;
+
+  @media (min-width: 768px) {
+    display: block;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    height: 1px;
+    background-color: @font-dark;
+    opacity: 0.1;
+  }
 }

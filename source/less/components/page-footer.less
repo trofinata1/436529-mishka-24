@@ -1,5 +1,17 @@
 .page-footer {
   background-color: @bg-gray;
+
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}
+
+.page-footer__logo {
+  @media (min-width: 768px) {
+    display: block;
+  }
 }
 
 .page-footer__copyright {

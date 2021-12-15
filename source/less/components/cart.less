@@ -1,7 +1,9 @@
 .cart {
+  width: 100%;
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
+  .shadow;
 
   &:hover {
     .cart__icon {
@@ -20,6 +22,17 @@
     .cart__icon {
       .icon-active;
     }
+  }
+
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    box-shadow: none;
   }
 }
 

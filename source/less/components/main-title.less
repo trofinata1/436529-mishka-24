@@ -1,0 +1,31 @@
+.main-title-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 73px;
+  padding-left: 30px;
+  padding-bottom: 73px;
+  padding-right: 30px;
+  text-align: center;
+  background-color: @bg-gray-color;
+  background-repeat: no-repeat;
+
+  &--image {
+    padding-bottom: 120px;
+    background-image: url("../img/bg/bg-title.jpg");
+    background-position: center;
+  }
+
+  @media (min-width: 768px) {
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+}
+
+.main-title {
+  margin: 0;
+  font-weight: 700;
+  font-size: 27px;
+  line-height: 30px;
+  color: @dark-font-color;
+}

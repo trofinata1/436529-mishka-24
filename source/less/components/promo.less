@@ -1,12 +1,32 @@
 .promo {
   .wave;
+  position: relative;
+  padding-top: 31px;
+
+  @media (min-width: 768px) {
+    padding-top: 39px;
+  }
 }
 
 .promo__title {
+  position: absolute;
+  top: 64px;
   margin: 0;
   font-weight: 700;
   font-size: 17px;
   line-height: 20px;
   text-transform: uppercase;
   color: @special;
+
+  @media (min-width: 768px) {
+    top: 39px;
+    right: 0;
+    text-align: center;
+    white-space: pre-line;
+  }
+
+  @media (min-width: 1150px) {
+    left: 0;
+    right: auto;
+  }
 }
