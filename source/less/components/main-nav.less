@@ -9,14 +9,14 @@
   width: 100%;
   background-color: @font-opposite;
 
-  @media @tablet {
+  @media (min-width: @tablet) {
     display: grid;
     grid-template-columns: 48% 1fr 39%;
     grid-template-rows: 88px 1px 1fr; //высота ячеек в пикселях пока временно, чтобы смотреть удобнее было, потом уберу
     align-items: center;
   }
 
-  @media @desktop {
+  @media (min-width: @desktop) {
     grid-template-columns: 67% 1fr 25%;
   }
 }
@@ -28,7 +28,7 @@
   right: 31px;
   padding: 0;
 
-  @media @tablet {
+  @media (min-width: @tablet) {
     display: none;
   }
 }
@@ -36,7 +36,7 @@
 .main-nav__list {
   width: 100%;
 
-  @media @tablet {
+  @media (min-width: @tablet) {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -46,7 +46,7 @@
     grid-row-end: 4;
   }
 
-  @media @desktop {
+  @media (min-width: @desktop) {
     grid-row-start: 1;
     grid-row-end: 2;
   }
@@ -56,7 +56,7 @@
   display: none;
   margin: 0;
 
-  @media @tablet {
+  @media (min-width: @tablet) {
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -70,7 +70,7 @@
 .main-nav__separator {
   display: none;
 
-  @media @tablet {
+  @media (min-width: @tablet) {
     display: block;
     grid-column-start: 1;
     grid-column-end: 4;

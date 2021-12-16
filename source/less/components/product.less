@@ -1,11 +1,11 @@
 .product {
-  @media @tablet {
+  @media (min-width: @tablet) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(5, auto);
   }
 
-  @media @desktop {
+  @media (min-width: @desktop) {
     grid-template-rows: repeat(5, auto);
     padding-left: 225px;
   }
@@ -14,13 +14,13 @@
 .product__title {
   padding-bottom: 41px;
 
-  @media @tablet {
+  @media (min-width: @tablet) {
     grid-column-start: 1;
     grid-column-end: 3;
     padding-bottom: 0;
   }
 
-  @media @desktop {
+  @media (min-width: @desktop) {
     position: absolute;
   }
 }
@@ -28,7 +28,7 @@
 .product__image {
   background-color: @bg-gray;
 
-  @media @tablet {
+  @media (min-width: @tablet) {
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 2;
@@ -36,7 +36,7 @@
     justify-self: end;
   }
 
-  @media @desktop {
+  @media (min-width: @desktop) {
     grid-row-start: 1;
     grid-row-end: 6;
   }
@@ -45,12 +45,12 @@
 .product__text {
   margin: 0;
 
-  @media @tablet {
+  @media (min-width: @tablet) {
     grid-column-start: 1;
     grid-column-end: 2;
   }
 
-  @media @desktop {
+  @media (min-width: @desktop) {
     grid-row-start: 2;
     grid-row-end: 3;
   }
@@ -65,14 +65,14 @@
   border-spacing: 0;
   border-color: @line-separator;
 
-  @media @tablet {
+  @media (min-width: @tablet) {
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 3;
     grid-row-end: 4;
   }
 
-  @media @desktop {
+  @media (min-width: @desktop) {
     grid-row-start: 3;
     grid-row-end: 4;
   }
@@ -94,7 +94,7 @@
   font-size: 17px;
   line-height: 24px;
 
-  @media @tablet {
+  @media (min-width: @tablet) {
     grid-row-start: 4;
     grid-row-end: 5;
   }
@@ -103,11 +103,11 @@
 .product__button {
   margin: 0 auto;
 
-  @media @tablet {
+  @media (min-width: @tablet) {
     align-self: end;
   }
 
-  @media @tablet {
+  @media (min-width: @tablet) {
     grid-row-start: 5;
     grid-row-end: 6;
   }

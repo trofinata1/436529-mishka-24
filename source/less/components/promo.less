@@ -3,7 +3,7 @@
   position: relative;
   padding-top: 31px;
 
-  @media @tablet {
+  @media (min-width: @tablet) {
     padding-top: 39px;
   }
 }
@@ -18,14 +18,14 @@
   text-transform: uppercase;
   color: @special;
 
-  @media @tablet {
+  @media (min-width: @tablet) {
     top: 39px;
     right: 0;
     text-align: center;
     white-space: pre-line;
   }
 
-  @media @desktop {
+  @media (min-width: @desktop) {
     left: 0;
     right: auto;
   }

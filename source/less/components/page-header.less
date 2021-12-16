@@ -10,6 +10,18 @@
   left: 118px;
   transform: translateY(-50%);
 
+  @media (min-width: @tablet) {
+    top: 22px;
+    left: 48px;
+    margin: 0;
+    transform: none;
+  }
+
+  @media (min-width: @desktop) {
+    left: 50%;
+    margin-left: -74.5px; //подвинула сразу на половину ширины того лого, который будет на десктопе
+  }
+
   &:hover {
     opacity: 0.6;
   }
@@ -21,17 +33,5 @@
 
   &:active {
     opacity: 0.3;
-  }
-
-  @media @tablet {
-    top: 22px;
-    left: 48px;
-    margin: 0;
-    transform: none;
-  }
-
-  @media @desktop {
-    left: 50%;
-    margin-left: -74.5px; //подвинула сразу на половину ширины того лого, который будет на десктопе
   }
 }

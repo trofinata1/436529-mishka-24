@@ -5,6 +5,17 @@
   font-size: 17px;
   line-height: 24px;
 
+  @media (min-width: @tablet) {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    box-shadow: none;
+  }
+
   &:hover {
     .cart__icon {
       .icon-hover;
@@ -22,17 +33,6 @@
     .cart__icon {
       .icon-active;
     }
-  }
-
-  @media @tablet {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row-start: 1;
-    grid-row-end: 2;
-    box-shadow: none;
   }
 }
 
