@@ -1,12 +1,12 @@
 .contacts {
-  @media (min-width: 768px) {
+  @media @tablet {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
   }
 
-  @media (min-width: 1150px) {
+  @media @desktop {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(4, auto);
@@ -14,14 +14,14 @@
 }
 
 .contacts__title {
-  @media (min-width: 768px) {
+  @media @tablet {
     width: 100%;
     background-image: url("../img/contacts/flag.svg");
     background-position: right;
     background-repeat: no-repeat;
   }
 
-  @media (min-width: 1150px) {
+  @media @desktop {
     padding-left: 111px;
     background-position: left;
   }
@@ -31,14 +31,14 @@
   font-size: 14px;
   line-height: 30px;
 
-  @media (min-width: 768px) {
+  @media @tablet {
     width: 50%;
     align-self: flex-start;
   }
 }
 
 .contacts__item-email {
-  @media (min-width: 1150px) {
+  @media @desktop {
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 2;
@@ -47,7 +47,7 @@
 }
 
 .contacts__item-address {
-  @media (min-width: 1150px) {
+  @media @desktop {
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 3;
@@ -85,11 +85,11 @@
 }
 
 .contacts__map {
-  @media (min-width: 768px) {
+  @media @tablet {
     width: 100%;
   }
 
-  @media (min-width: 1150px) {
+  @media @desktop {
     grid-row-start: 1;
     grid-row-end: 5;
     grid-column-start: 2;
@@ -102,11 +102,11 @@
 .contacts__button {
   margin: 0 auto;
 
-  @media (min-width: 768px) {
+  @media @tablet {
     margin: 0 auto;
   }
 
-  @media (min-width: 1150px) {
+  @media @desktop {
     align-self: end;
   }
 }

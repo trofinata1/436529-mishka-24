@@ -1,7 +1,7 @@
 .categories-list {
   .reset-list;
 
-  @media (min-width: 768px) {
+  @media @tablet {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -10,7 +10,7 @@
 }
 
 .categories-list__item {
-  @media (min-width: 768px) {
+  @media @tablet {
     width: 50%;
   }
 }
@@ -37,21 +37,21 @@
       padding-top: 18px;
       padding-bottom: 23px;
       background-position: top 15px right 30px;
-      box-shadow: 0 -5px 0 0 @special;
+      box-shadow: @category-shadow-interior;
     }
 
     &:focus {
       padding-top: 18px;
       padding-bottom: 23px;
       background-position: top 15px right 30px;
-      box-shadow: 0 -5px 0 0 @special;
+      box-shadow: @category-shadow-interior;
     }
 
     &:active {
       padding-top: 18px;
       padding-bottom: 23px;
       background-position: top 15px right 30px;
-      box-shadow: 0 -5px 0 0 @special;
+      box-shadow: @category-shadow-interior;
     }
   }
 
@@ -64,21 +64,21 @@
       padding-top: 16px;
       padding-bottom: 27px;
       background-position: top 16px right 30px;
-      box-shadow: 0 -5px 0 0 @category-toys;
+      box-shadow: @category-shadow-toys;
     }
 
     &:focus {
       padding-top: 16px;
       padding-bottom: 27px;
       background-position: top 16px right 30px;
-      box-shadow: 0 -5px 0 0 @category-toys;
+      box-shadow: @category-shadow-toys;
     }
 
     &:active {
       padding-top: 16px;
       padding-bottom: 27px;
       background-position: top 16px right 30px;
-      box-shadow: 0 -5px 0 0 @category-toys;
+      box-shadow: @category-shadow-toys;
     }
   }
 

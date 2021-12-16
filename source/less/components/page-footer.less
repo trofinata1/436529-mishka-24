@@ -1,7 +1,7 @@
 .page-footer {
   background-color: @bg-gray;
 
-  @media (min-width: 768px) {
+  @media @tablet {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -9,13 +9,11 @@
 }
 
 .page-footer__logo {
-  @media (min-width: 768px) {
+  @media @tablet {
     display: block;
   }
 }
 
 .page-footer__copyright {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  .flex-center;
 }

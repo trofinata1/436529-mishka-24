@@ -1,7 +1,7 @@
 .page-header {
+  .shadow;
   position: relative;
   min-height: 79px;
-  .shadow;
 }
 
 .page-header__logo {
@@ -23,14 +23,14 @@
     opacity: 0.3;
   }
 
-  @media (min-width: 768px) {
+  @media @tablet {
     top: 22px;
     left: 48px;
     margin: 0;
     transform: none;
   }
 
-  @media (min-width: 1150px) {
+  @media @desktop {
     left: 50%;
     margin-left: -74.5px; //подвинула сразу на половину ширины того лого, который будет на десктопе
   }

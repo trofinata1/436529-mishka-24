@@ -9,62 +9,34 @@
   width: 100%;
   background-color: @font-opposite;
 
-  @media (min-width: 768px) {
+  @media @tablet {
     display: grid;
     grid-template-columns: 48% 1fr 39%;
     grid-template-rows: 88px 1px 1fr; //высота ячеек в пикселях пока временно, чтобы смотреть удобнее было, потом уберу
     align-items: center;
   }
 
-  @media (min-width: 1150px) {
+  @media @desktop {
     grid-template-columns: 67% 1fr 25%;
   }
 }
 
 .main-nav__toggle {
+  .reset-button;
   position: absolute; //Относительно page-header
   top: 41px;
   right: 31px;
-  .reset-button;
   padding: 0;
 
-  @media (min-width: 768px) {
+  @media @tablet {
     display: none;
-  }
-}
-
-.main-nav__mark {
-  position: relative;
-  display: block;
-  width: 20px;
-  height: 2px;
-  background-color: @toggle;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 4px;
-    right: 0;
-    left: 0;
-    height: 2px;
-    background-color: @toggle;
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: 4px;
-    right: 0;
-    left: 0;
-    height: 2px;
-    background-color: @toggle;
   }
 }
 
 .main-nav__list {
   width: 100%;
 
-  @media (min-width: 768px) {
+  @media @tablet {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -74,7 +46,7 @@
     grid-row-end: 4;
   }
 
-  @media (min-width: 1150px) {
+  @media @desktop {
     grid-row-start: 1;
     grid-row-end: 2;
   }
@@ -84,7 +56,7 @@
   display: none;
   margin: 0;
 
-  @media (min-width: 768px) {
+  @media @tablet {
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -98,7 +70,7 @@
 .main-nav__separator {
   display: none;
 
-  @media (min-width: 768px) {
+  @media @tablet {
     display: block;
     grid-column-start: 1;
     grid-column-end: 4;
