@@ -50,13 +50,17 @@
   box-shadow: 0 1px 0 @line-separator, inset 0 1px 0 @line-separator;
 }
 
+.header-line {
+  background-color: @font-dark;
+  opacity: 0.1;
+}
+
 .separator-vertical {
+  .header-line;
   content: "";
   position: absolute;
   top: 0;
   bottom: 0;
   right: 0;
   width: 1px;
-  background-color: @font-dark;
-  opacity: 0.1;
 }

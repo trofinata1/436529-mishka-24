@@ -1,32 +1,36 @@
 .main-nav {
-  // position: absolute; //задать при нажатии на кнопку, вызывающую меню
-  top: 79px;
-  display: flex;
-  flex-direction: column;
+  position: absolute; //Абсолют - потому что это меню на мобилке должно накладываться сверху всего контента. Не знаю других способов, кроме абсолют, как это сделать
+  top: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
   justify-content: center;
-  align-items: flex-start;
-  flex-wrap: wrap;
+  align-content: center;
   width: 100%;
   background-color: @font-opposite;
+  z-index: 1;
 
   @media (min-width: @tablet) {
-    display: grid;
-    grid-template-columns: 48% 1fr 39%;
-    grid-template-rows: 88px 1px 1fr; //высота ячеек в пикселях пока временно, чтобы смотреть удобнее было, потом уберу
-    align-items: center;
+    position: static;
+    grid-template-columns: 24% 24% 82px 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    z-index: 0;
   }
 
   @media (min-width: @desktop) {
-    grid-template-columns: 67% 1fr 25%;
+    grid-template-columns: 1fr 1fr 82px 1fr;
   }
 }
 
 .main-nav__toggle {
   .reset-button;
   position: absolute; //Относительно page-header
-  top: 41px;
+  top: -39px;
   right: 31px;
-  padding: 0;
 
   @media (min-width: @tablet) {
     display: none;
@@ -35,18 +39,21 @@
 
 .main-nav__list {
   width: 100%;
+  justify-self: center;
 
   @media (min-width: @tablet) {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 3;
-    grid-row-end: 4;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
   }
 
   @media (min-width: @desktop) {
+    grid-column-start: 1;
+    grid-column-end: 2;
     grid-row-start: 1;
     grid-row-end: 2;
   }
@@ -57,27 +64,12 @@
   margin: 0;
 
   @media (min-width: @tablet) {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row-start: 3;
-    grid-row-end: 4;
-  }
-}
-
-.main-nav__separator {
-  display: none;
-
-  @media (min-width: @tablet) {
-    display: block;
-    grid-column-start: 1;
-    grid-column-end: 4;
+    display: grid;
+    grid-column-start: 4;
+    grid-column-end: 5;
     grid-row-start: 2;
     grid-row-end: 3;
-    height: 1px;
-    background-color: @font-dark;
-    opacity: 0.1;
+    justify-self: end;
+    align-self: center;
   }
 }

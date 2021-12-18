@@ -1,6 +1,5 @@
 .site-list {
   .reset-list;
-  height: 100%;
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
@@ -9,16 +8,17 @@
 
 .site-list__item {
   .shadow;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  height: 100%;
 
   @media (min-width: @tablet) {
+    width: 100%;
     box-shadow: none;
   }
 
   @media (min-width: @desktop) {
+    display: flex;
+    align-items: center;
+    height: 100%;
+
     &--catalog {
       position: relative;
 
@@ -26,5 +26,15 @@
         .separator-vertical;
       }
     }
+  }
+}
+
+.site-list__link {
+  display: block;
+  padding-right: 30px;
+  padding-left: 76px;
+
+  @media (min-width: @tablet) {
+    padding: 0;
   }
 }

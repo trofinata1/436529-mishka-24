@@ -1,25 +1,56 @@
 .page-header {
   .shadow;
   position: relative;
-  min-height: 79px;
-}
-
-.page-header__logo {
-  position: absolute;
-  top: 50%;
-  left: 118px;
-  transform: translateY(-50%);
+  display: grid;
+  justify-content: center;
 
   @media (min-width: @tablet) {
-    top: 22px;
-    left: 48px;
-    margin: 0;
-    transform: none;
+    grid-template-columns: 24% 24% 82px 1fr;
+    grid-template-rows: 1fr 1fr;
+    box-shadow: none;
+    z-index: 1;
+
+    &::after {
+      .header-line;
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 0;
+      left: 0;
+      margin-top: -0.5px;
+      height: 1px;
+    }
   }
 
   @media (min-width: @desktop) {
-    left: 50%;
-    margin-left: -74.5px; //подвинула сразу на половину ширины того лого, который будет на десктопе
+    grid-template-columns: 1fr 1fr 82px 1fr;
+  }
+}
+
+.page-header__logo {
+  justify-self: center;
+  width: 86px;
+  margin-top: 22px;
+  margin-bottom: 22px;
+
+  @media (min-width: @tablet) {
+    position: relative;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    justify-self: start;
+    margin-top: 22px;
+    margin-bottom: 20px;
+    z-index: 1;
+  }
+
+  @media (min-width: @desktop) {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    justify-self: center;
+    margin-top: 9px;
+    margin-bottom: 7px;
   }
 
   &:hover {

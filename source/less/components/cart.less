@@ -1,18 +1,28 @@
 .cart {
   .shadow;
-  width: 100%;
+  // display: flex; Появляется при открытии меню
+  grid-row-start: 3;
+  grid-row-end: 4;
+  align-items: center;
+  height: 100%;
+  padding-right: 30px;
+  padding-left: 76px;
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
 
   @media (min-width: @tablet) {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
-    grid-column-start: 3;
-    grid-column-end: 4;
+    grid-column-start: 4;
+    grid-column-end: 5;
     grid-row-start: 1;
     grid-row-end: 2;
+    justify-self: end;
+    width: 88%;
+    height: 100%;
+    padding: 0;
     box-shadow: none;
   }
 
@@ -37,5 +47,10 @@
 }
 
 .cart__icon {
+  margin-right: 25px;
   opacity: 0.2;
+
+  @media (min-width: @tablet) {
+    margin: 0;
+  }
 }
