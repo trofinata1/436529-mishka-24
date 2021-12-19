@@ -1,5 +1,4 @@
 .site-list {
-  .reset-list;
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
@@ -10,19 +9,18 @@
   .shadow;
 
   @media (min-width: @tablet) {
-    width: 100%;
+    display: flex;
+    align-items: center;
+    width: 43%;
+    height: 100%;
     box-shadow: none;
   }
 
-  @media (min-width: @desktop) {
-    display: flex;
-    align-items: center;
-    height: 100%;
+  &--catalog {
+    position: relative;
 
-    &--catalog {
-      position: relative;
-
-      &::after {
+    &::after {
+      @media (min-width: @desktop) {
         .separator-vertical;
       }
     }

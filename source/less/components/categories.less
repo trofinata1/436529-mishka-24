@@ -1,8 +1,11 @@
 .categories {
   @media (min-width: @tablet) {
     position: relative;
+    background-color: @bg-gray;
+  }
 
-    &::after {
+  &::after {
+    @media (min-width: @tablet) {
       content: "";
       position: absolute;
       width: 100%;

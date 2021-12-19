@@ -38,17 +38,20 @@
 }
 
 .main-nav__list {
+  .reset-list;
   width: 100%;
-  justify-self: center;
+  justify-self: flex-start;
 
   @media (min-width: @tablet) {
     display: flex;
     justify-content: flex-start;
+    justify-self: flex-start;
     align-items: center;
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start: 2;
     grid-row-end: 3;
+    margin-left: 50px;
   }
 
   @media (min-width: @desktop) {
@@ -71,5 +74,6 @@
     grid-row-end: 3;
     justify-self: end;
     align-self: center;
+    margin-right: 50px;
   }
 }

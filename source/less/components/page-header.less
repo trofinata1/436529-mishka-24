@@ -9,8 +9,10 @@
     grid-template-rows: 1fr 1fr;
     box-shadow: none;
     z-index: 1;
+  }
 
-    &::after {
+  &::after {
+    @media (min-width: @tablet) {
       .header-line;
       content: "";
       position: absolute;
@@ -41,6 +43,7 @@
     grid-column-end: 2;
     justify-self: start;
     margin-top: 22px;
+    margin-left: 50px;
     margin-bottom: 20px;
     z-index: 1;
   }
