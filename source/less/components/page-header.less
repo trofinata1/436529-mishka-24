@@ -11,6 +11,10 @@
     z-index: 1;
   }
 
+  @media (min-width: @desktop) {
+    grid-template-columns: 1fr 1fr 82px 1fr;
+  }
+
   &::after {
     @media (min-width: @tablet) {
       .header-line;
@@ -22,10 +26,6 @@
       margin-top: -0.5px;
       height: 1px;
     }
-  }
-
-  @media (min-width: @desktop) {
-    grid-template-columns: 1fr 1fr 82px 1fr;
   }
 }
 
