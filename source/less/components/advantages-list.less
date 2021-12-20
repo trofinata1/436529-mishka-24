@@ -10,6 +10,15 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(3, 1fr);
   }
+
+  @media (min-width: @tablet) {
+    grid-column-start: 2;
+    grid-column-end: 7;
+    grid-row-start: 2;
+    grid-row-end: 5;
+    column-gap: 85px;
+    row-gap: 59px;
+  }
 }
 
 .advantages-list__item {

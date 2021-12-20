@@ -6,8 +6,9 @@
   }
 
   @media (min-width: @desktop) {
-    grid-template-rows: repeat(5, auto);
-    margin-left: 225px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: min(153px) repeat(4, auto);
   }
 }
 
@@ -19,7 +20,11 @@
   }
 
   @media (min-width: @desktop) {
-    position: absolute;
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    padding-top: 51px;
   }
 }
 
@@ -41,8 +46,11 @@
   }
 
   @media (min-width: @desktop) {
+    grid-column-start: 4;
+    grid-column-end: 7;
     grid-row-start: 1;
-    grid-row-end: 6;
+    grid-row-end: -1;
+    height: auto;
   }
 }
 
@@ -58,8 +66,12 @@
   }
 
   @media (min-width: @desktop) {
+    grid-column-start: 2;
+    grid-column-end: 4;
     grid-row-start: 2;
     grid-row-end: 3;
+    align-self: start;
+    margin-top: 0;
   }
 }
 
@@ -83,8 +95,9 @@
   }
 
   @media (min-width: @desktop) {
-    grid-row-start: 3;
-    grid-row-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    margin-bottom: 109px;
   }
 }
 
@@ -109,6 +122,12 @@
     grid-row-start: 4;
     grid-row-end: 5;
   }
+
+  @media (min-width: @desktop) {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    margin-bottom: 33px;
+  }
 }
 
 .product__button {
@@ -118,8 +137,12 @@
     align-self: end;
   }
 
-  @media (min-width: @tablet) {
+  @media (min-width: @desktop) {
+    grid-column-start: 2;
+    grid-column-end: 4;
     grid-row-start: 5;
     grid-row-end: 6;
+    margin-right: 0;
+    margin-left: 0;
   }
 }
