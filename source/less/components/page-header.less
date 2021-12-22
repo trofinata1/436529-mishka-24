@@ -1,6 +1,5 @@
 .page-header {
   .shadow;
-  position: relative;
   display: grid;
   justify-content: center;
 
@@ -12,20 +11,8 @@
   }
 
   @media (min-width: @desktop) {
+    .content-center;
     grid-template-columns: 1fr 1fr 82px 1fr;
-  }
-
-  &::after {
-    @media (min-width: @tablet) {
-      .header-line;
-      content: "";
-      position: absolute;
-      top: 50%;
-      right: 0;
-      left: 0;
-      margin-top: -0.5px;
-      height: 1px;
-    }
   }
 }
 

@@ -19,8 +19,12 @@
   line-height: 30px;
   color: @font-dark;
 
-  @media (min-width: 768px) {
+  @media (min-width: @tablet) {
     margin-right: 50px;
     margin-left: 50px;
+  }
+
+  @media (min-width: @desktop) {
+    .content-center;
   }
 }

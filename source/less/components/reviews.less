@@ -15,18 +15,21 @@
     padding-bottom: 47px;
     padding-left: 50px;
     background-image: url("../img/bg/bg-review.png");
-    background-position: left,
-      bottom;
-    background-repeat: no-repeat,
-      repeat-x;
+    background-position: left;
+    background-repeat: no-repeat;
   }
 
   @media (min-width: @desktop) {
+    .content-center;
     grid-template-columns: repeat(6, 1fr);
-    margin-left: 50px;
     padding-right: 0;
     padding-bottom: 96px;
     padding-left: 0;
+    background-image: url("../img/bg/bg-review.png"),
+      url("../img/decorations/wave.svg");
+    background-position: left, bottom;
+    background-repeat: no-repeat,
+      repeat-x;
   }
 }
 
