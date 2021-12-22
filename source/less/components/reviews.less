@@ -1,35 +1,27 @@
 .reviews {
-  margin-right: 30px;
-  margin-bottom: 45px;
-  margin-left: 30px;
+  position: relative;
 
   @media (min-width: @tablet) {
-    position: relative;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, auto);
-    margin-right: 50px;
-    margin-bottom: 68px;
-    margin-left: 0;
-    padding-top: 79px;
-    padding-bottom: 47px;
-    padding-left: 50px;
     background-image: url("../img/bg/bg-review.png");
     background-position: left;
     background-repeat: no-repeat;
   }
 
   @media (min-width: @desktop) {
-    .content-center;
-    grid-template-columns: repeat(6, 1fr);
-    padding-right: 0;
-    padding-bottom: 96px;
-    padding-left: 0;
-    background-image: url("../img/bg/bg-review.png"),
-      url("../img/decorations/wave.svg");
-    background-position: left, bottom;
-    background-repeat: no-repeat,
-      repeat-x;
+    background-image: none;
+  }
+
+  &::after {
+    .decor;
+    bottom: -45px;
+
+    @media (min-width: @tablet) {
+      bottom: -68px;
+    }
+
+    @media (min-width: @desktop) {
+      bottom: -67px;
+    }
   }
 }
 
@@ -52,9 +44,10 @@
   align-items: center;
 
   @media (min-width: @tablet) {
-    position: absolute;
-    right: 0;
-    bottom: 0;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    justify-self: end;
+    align-self: end;
     width: 137px;
   }
 
@@ -174,8 +167,8 @@
   margin: 0 auto;
 
   @media (min-width: @tablet) {
-    grid-column-start: 2;
-    grid-column-end: 3;
+    grid-column-start: 3;
+    grid-column-end: 4;
     grid-row-start: 1;
     grid-row-end: 2;
     justify-self: end;

@@ -6,7 +6,6 @@
 
 .wave {
   background-image: url("../img/decorations/wave.svg");
-  background-position: bottom;
   background-repeat: repeat-x;
 }
 
@@ -69,4 +68,23 @@
   max-width: @content;
   margin-left: auto;
   margin-right: auto;
+}
+
+.decor {
+  .wave;
+  content: "";
+  position: absolute;
+  right: 0;
+  left: 0;
+  height: 6px;
+}
+
+.margin-mobile {
+  margin-right: 30px;
+  margin-left: 30px;
+}
+
+.margin-tablet {
+  margin-right: 50px;
+  margin-left: 50px;
 }

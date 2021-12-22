@@ -1,18 +1,22 @@
 .page-header {
   .shadow;
-  display: grid;
-  justify-content: center;
+  position: relative;
 
   @media (min-width: @tablet) {
-    grid-template-columns: 24% 24% 82px 1fr;
-    grid-template-rows: 1fr 1fr;
     box-shadow: none;
     z-index: 1;
   }
 
-  @media (min-width: @desktop) {
-    .content-center;
-    grid-template-columns: 1fr 1fr 82px 1fr;
+  &::after {
+    @media (min-width: @tablet) {
+      .header-line;
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 0;
+      left: 0;
+      height: 1px;
+    }
   }
 }
 
@@ -30,7 +34,6 @@
     grid-column-end: 2;
     justify-self: start;
     margin-top: 22px;
-    margin-left: 50px;
     margin-bottom: 20px;
     z-index: 1;
   }
