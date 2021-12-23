@@ -74,9 +74,19 @@
   .wave;
   content: "";
   position: absolute;
-  right: 0;
-  left: 0;
+  right: -30px;
+  left: -30px;
   height: 6px;
+
+  @media (min-width: @tablet) {
+    right: -50px;
+    left: -50px;
+  }
+
+  @media (min-width: @desktop) {
+    right: 0;
+    left: 0;
+  }
 }
 
 .margin-mobile {

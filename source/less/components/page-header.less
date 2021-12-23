@@ -1,10 +1,17 @@
 .page-header {
   .shadow;
   position: relative;
+  display: grid;
 
   @media (min-width: @tablet) {
+    grid-template-columns: 48px 1fr 50px;
+    grid-template-rows: 1fr 1fr;
     box-shadow: none;
     z-index: 1;
+  }
+
+  @media (min-width: @desktop) {
+    grid-template-columns: 1fr @content 1fr;
   }
 
   &::after {
@@ -28,12 +35,12 @@
 
   @media (min-width: @tablet) {
     position: relative;
+    grid-column-start: 2;
+    grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 2;
-    grid-column-start: 1;
-    grid-column-end: 2;
     justify-self: start;
-    margin-top: 22px;
+    align-self: start;
     margin-bottom: 20px;
     z-index: 1;
   }

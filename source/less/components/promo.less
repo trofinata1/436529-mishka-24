@@ -1,5 +1,21 @@
 .promo {
+  .margin-mobile;
   position: relative;
+  margin-top: 31px;
+
+  @media (min-width: @tablet) {
+    .margin-tablet;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, auto) 52px;
+  }
+
+  @media (min-width: @desktop) {
+    .content-center;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 118px repeat(3, auto) 52px;
+    margin-top: 54px;
+  }
 
   &::after {
     .decor;

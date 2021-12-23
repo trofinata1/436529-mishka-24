@@ -1,14 +1,28 @@
 .reviews {
+  .margin-mobile;
   position: relative;
 
   @media (min-width: @tablet) {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    margin-left: 0;
+    padding-top: 82px;
+    padding-bottom: 47px;
+    margin-right: 50px;
+    padding-left: 50px;
     background-image: url("../img/bg/bg-review.png");
     background-position: left;
     background-repeat: no-repeat;
   }
 
   @media (min-width: @desktop) {
-    background-image: none;
+    .content-center;
+    grid-template-columns: repeat(6, 1fr);
+    padding-right: 0;
+    padding-bottom: 96px;
+    padding-left: 0;
   }
 
   &::after {
@@ -17,6 +31,7 @@
 
     @media (min-width: @tablet) {
       bottom: -68px;
+      left: 0;
     }
 
     @media (min-width: @desktop) {

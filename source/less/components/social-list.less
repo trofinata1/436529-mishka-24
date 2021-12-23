@@ -1,7 +1,15 @@
 .social-list {
   .reset-list;
   .flex-center;
-  flex-wrap: wrap;
-  flex-grow: 1;
-  margin: 0 auto;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+
+  @media (min-width: @tablet) {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
 }
