@@ -1,0 +1,20 @@
+.categories {
+  @media (min-width: @tablet) {
+    position: relative;
+    background-color: @bg-gray;
+  }
+
+  &::after {
+    @media (min-width: @tablet) {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 24px;
+      right: 0;
+      bottom: -12px;
+      left: 0;
+      background-image: url("../img/decorations/wave-wide.svg");
+      z-index: 1;
+    }
+  }
+}

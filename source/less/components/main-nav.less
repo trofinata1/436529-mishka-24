@@ -1,7 +1,77 @@
 .main-nav {
+  position: absolute; //Абсолют - потому что это меню на мобилке должно накладываться сверху всего контента. Не знаю других способов, кроме абсолют, как это сделать
+  top: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  justify-content: center;
+  align-content: center;
+  width: 100%;
   background-color: @font-opposite;
+  z-index: 1;
+
+  @media (min-width: @tablet) {
+    position: static;
+    grid-template-columns: 24% 24% 82px 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    z-index: 0;
+  }
+
+  @media (min-width: @desktop) {
+    grid-template-columns: 1fr 1fr 82px 1fr;
+  }
 }
 
 .main-nav__toggle {
   .reset-button;
+  position: absolute; //Относительно page-header
+  top: -39px;
+  right: 0;
+
+  @media (min-width: @tablet) {
+    display: none;
+  }
+}
+
+.main-nav__list {
+  .reset-list;
+  width: 100%;
+  justify-self: flex-start;
+
+  @media (min-width: @tablet) {
+    display: flex;
+    justify-content: flex-start;
+    justify-self: flex-start;
+    align-items: center;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+
+  @media (min-width: @desktop) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+}
+
+.main-nav__offer {
+  display: none;
+  margin: 0;
+
+  @media (min-width: @tablet) {
+    display: grid;
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    justify-self: end;
+    align-self: center;
+  }
 }

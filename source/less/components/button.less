@@ -1,6 +1,10 @@
 .button {
-  display: block;
-  align-items: stretch;
+  .flex-center;
+  box-sizing: border-box;
+  max-width: max-content;
+  min-width: 260px;
+  min-height: 52px;
+  margin: 0;
   padding: 0;
   font-family: @font-family-main;
   font-weight: 700;
@@ -11,18 +15,14 @@
   text-decoration: none;
   color: @font-base;
   background-color: transparent;
-  border: 2px solid @font-base;
+  border: @border-base;
   cursor: pointer;
   outline: transparent;
   appearance: none;
 
-  &--narrow {
-    line-height: 16px;
-  }
-
   &:hover {
-    color: @font-opposite;
     .button-interaction;
+    color: @font-opposite;
   }
 
   &:focus {
@@ -30,8 +30,12 @@
   }
 
   &:active {
-    color: @font-opposite-active;
     .button-interaction;
+    color: @font-opposite-active;
+  }
+
+  &--narrow {
+    line-height: 16px;
   }
 
   &--color {
@@ -46,7 +50,7 @@
     }
 
     &:focus {
-      outline: 2px solid @font-base;
+      outline: @border-base;
       color: @font-opposite;
     }
 

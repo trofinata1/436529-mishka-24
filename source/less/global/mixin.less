@@ -1,6 +1,11 @@
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .wave {
   background-image: url("../img/decorations/wave.svg");
-  background-position: bottom;
   background-repeat: repeat-x;
 }
 
@@ -38,4 +43,58 @@
 .outline-radius {
   .outline;
   border-radius: 10px;
+}
+
+.shadow {
+  box-shadow: 0 1px 0 @line-separator, inset 0 1px 0 @line-separator;
+}
+
+.header-line {
+  background-color: @font-dark;
+  opacity: 0.1;
+}
+
+.separator-vertical {
+  .header-line;
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 1px;
+}
+
+.content-center {
+  max-width: @content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.decor {
+  .wave;
+  content: "";
+  position: absolute;
+  right: -30px;
+  left: -30px;
+  height: 6px;
+
+  @media (min-width: @tablet) {
+    right: -50px;
+    left: -50px;
+  }
+
+  @media (min-width: @desktop) {
+    right: 0;
+    left: 0;
+  }
+}
+
+.margin-mobile {
+  margin-right: 30px;
+  margin-left: 30px;
+}
+
+.margin-tablet {
+  margin-right: 50px;
+  margin-left: 50px;
 }

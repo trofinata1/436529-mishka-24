@@ -1,12 +1,59 @@
 .promo {
-  .wave;
+  .margin-mobile;
+  position: relative;
+  margin-top: 31px;
+
+  @media (min-width: @tablet) {
+    .margin-tablet;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, auto) 52px;
+  }
+
+  @media (min-width: @desktop) {
+    .content-center;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 118px repeat(3, auto) 52px;
+    margin-top: 54px;
+  }
+
+  &::after {
+    .decor;
+    bottom: -52px;
+
+    @media (min-width: @desktop) {
+      bottom: -73px;
+    }
+  }
 }
 
 .promo__title {
+  position: absolute;
+  top: 30px;
   margin: 0;
   font-weight: 700;
   font-size: 17px;
   line-height: 20px;
   text-transform: uppercase;
   color: @special;
+
+  @media (min-width: @tablet) {
+    position: static;
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    margin-right: 13px;
+    margin-left: auto;
+    text-align: center;
+    white-space: pre-line;
+  }
+
+  @media (min-width: @desktop) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    align-self: end;
+    margin-right: 0;
+    margin-left: 32px;
+  }
 }

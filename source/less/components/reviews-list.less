@@ -1,3 +1,15 @@
 .reviews-list {
   .reset-list;
+
+  @media (min-width: @tablet) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+
+  @media (min-width: @desktop) {
+    grid-column-start: 2;
+    grid-column-end: 7;
+  }
 }

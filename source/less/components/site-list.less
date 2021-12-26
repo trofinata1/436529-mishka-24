@@ -1,7 +1,37 @@
 .site-list {
-  .reset-list;
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
   color: @font-dark;
+}
+
+.site-list__item {
+  .shadow;
+
+  @media (min-width: @tablet) {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    box-shadow: none;
+  }
+
+  &--catalog {
+    position: relative;
+
+    &::after {
+      @media (min-width: @desktop) {
+        .separator-vertical;
+      }
+    }
+  }
+}
+
+.site-list__link {
+  display: block;
+  padding-right: 30px;
+  padding-left: 76px;
+
+  @media (min-width: @tablet) {
+    padding: 0;
+  }
 }

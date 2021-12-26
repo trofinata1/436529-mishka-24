@@ -4,6 +4,21 @@
   font-size: 17px;
   line-height: 20px;
   color: @font-dark;
+
+  @media (min-width: @tablet) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  @media (min-width: @tablet) {
+    grid-column-start: 2;
+    grid-column-end: 7;
+    grid-row-start: 2;
+    grid-row-end: 5;
+    column-gap: 85px;
+    row-gap: 59px;
+  }
 }
 
 .advantages-list__item {
@@ -16,18 +31,42 @@
 
   &--style {
     background-image: url("../img/about/style.svg");
+
+    @media (min-width: @tablet) {
+      grid-column-start: 1;
+      grid-column-end: 2;
+    }
   }
 
   &--like {
     background-image: url("../img/about/like.svg");
+
+    @media (min-width: @tablet) {
+      grid-column-start: 1;
+      grid-column-end: 2;
+    }
   }
 
   &--love {
     background-image: url("../img/about/love.svg");
+
+    @media (min-width: @tablet) {
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 1;
+      grid-row-end: 2;
+    }
   }
 
   &--domestic {
     background-image: url("../img/about/domestic.svg");
+
+    @media (min-width: @tablet) {
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 2;
+      grid-row-end: 3;
+    }
   }
 
   &--gift {
