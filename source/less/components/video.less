@@ -1,18 +1,115 @@
+.video {
+  .margin-mobile;
+  box-sizing: border-box;
+  margin-bottom: 58px;
+  border: @border-light;
+
+  @media (min-width: @tablet) {
+    .margin-tablet;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 64px;
+  }
+
+  @media (min-width: @desktop) {
+    .content-center;
+    display: grid;
+    grid-template-columns: 63% 29.5%;
+    grid-template-rows: repeat(3, auto);
+    column-gap: 79px;
+    margin-bottom: 105px;
+  }
+
+  &:hover {
+    box-shadow: @shadow-hover;
+  }
+
+  &:active {
+    box-shadow: @shadow-active;
+  }
+}
+
 .video__title {
   margin: 0;
+  margin-right: 13px;
+  margin-top: 21px;
+  margin-left: 34px;
+  margin-bottom: 26px;
   font-size: 17px;
   line-height: 24px;
   color: @font-dark;
   background-image: url("../img/video/video.svg");
   background-position: left center;
   background-repeat: no-repeat;
+
+  @media (min-width: @tablet) {
+    order: 1;
+    margin-top: 41px;
+    margin-right: 42px;
+    margin-bottom: 24px;
+    margin-left: 42px;
+    white-space: normal;
+  }
+
+  @media (min-width: @desktop) {
+    margin-top: 47px;
+    margin-right: 57px;
+    margin-bottom: 27px;
+    margin-left: 0;
+    padding-top: 27px;
+    white-space: pre-line;
+    background-position: top left;
+  }
 }
 
 .video__text {
   margin: 0;
+  margin-top: 35px;
+  margin-right: 15px;
+  margin-bottom: 41px;
+  margin-left: 34px;
   font-size: 13px;
+
+  @media (min-width: @tablet) {
+    order: 2;
+    margin-top: 0;
+    margin-right: 42px;
+    margin-bottom: 40px;
+    margin-left: 42px;
+  }
+
+  @media (min-width: @desktop) {
+    margin: 0;
+    margin-right: 57px;
+    margin-bottom: 51px;
+  }
 }
 
 .video__button {
   .reset-button;
+  position: absolute;
+}
+
+.video__button-order {
+  min-width: 192px;
+  margin: 0 auto;
+  margin-bottom: 33px;
+
+  @media (min-width: @tablet) {
+    order: 3;
+    min-width: calc(100% - 84px);
+    margin-right: 42px;
+    margin-bottom: 46px;
+    margin-left: 42px;
+  }
+
+  @media (min-width: @desktop) {
+    align-self: end;
+    min-width: 230px;
+    margin: 0;
+    margin-right: 57px;
+    margin-bottom: 60px;
+  }
 }

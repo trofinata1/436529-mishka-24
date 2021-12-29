@@ -3,6 +3,11 @@
   background-color: @bg-gray;
   background-repeat: no-repeat;
 
+  @media (min-width: @desktop) {
+    grid-column-start: 1;
+    grid-column-end: 9;
+  }
+
   &--image {
     background-image: url("../img/bg/bg-title.jpg");
     background-position: center;
