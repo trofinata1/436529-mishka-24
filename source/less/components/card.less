@@ -10,13 +10,53 @@
 }
 
 .card__image {
+  display: block;
+  width: 100%;
   background-color: @bg-gray;
+  object-fit: cover;
+  object-position: 50% 50%;
+
+  @media (min-width: @tablet) {
+    width: 334px;
+    height: 334px;
+  }
+
+  @media (min-width: @desktop) {
+    width: 316px;
+    height: 462px;
+  }
+}
+
+.card__info {
+  @media (min-width: @tablet) {
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    width: 100%;
+  }
+
+  @media (min-width: @desktop) {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    height: 100%;
+  }
 }
 
 .card__parameters {
   margin: 0;
   font-size: 13px;
   line-height: 30px;
+}
+
+.card__order {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (min-width: @tablet) {
+    margin-top: auto;
+  }
 }
 
 .card__price {
