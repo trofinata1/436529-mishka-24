@@ -99,6 +99,20 @@
     @media (min-width: @desktop) {
       padding-left: 63px;
     }
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 7px;
+      right: 0;
+      left: 60px;
+      height: 1px;
+      background-color: @special-decoration;
+
+      @media (min-width: @tablet) {
+        display: none;
+      }
+    }
   }
 
   &--square {
@@ -330,6 +344,7 @@
 
   &--type {
     margin-bottom: 31px;
+    padding-top: 52px;
 
     @media (min-width: @tablet) {
       grid-template-rows: repeat(2, 52px);
@@ -534,6 +549,8 @@
 
   &--tel,
   &--email {
+    padding-bottom: 13px;
+
     @media (min-width: @tablet) {
       grid-column-start: 2;
       grid-column-end: 5;
