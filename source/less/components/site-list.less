@@ -3,6 +3,14 @@
   font-size: 17px;
   line-height: 24px;
   color: @font-dark;
+
+  @media (min-width: @tablet) {
+    font-size: 15px;
+  }
+
+  @media (min-width: @desktop) {
+    font-size: 17px;
+  }
 }
 
 .site-list__item {
@@ -10,13 +18,27 @@
 
   @media (min-width: @tablet) {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     height: 100%;
+    padding: 0;
     box-shadow: none;
+  }
+
+  @media (min-width: @desktop) {
+    box-sizing: border-box;
   }
 
   &--catalog {
     position: relative;
+
+    @media (min-width: @tablet) {
+      margin-right: 40px;
+    }
+
+    @media (min-width: @desktop) {
+      margin-right: 35px;
+      padding-right: 35px;
+    }
 
     &::after {
       @media (min-width: @desktop) {
@@ -28,10 +50,20 @@
 
 .site-list__link {
   display: block;
+  padding-top: 28px;
   padding-right: 30px;
+  padding-bottom: 26px;
   padding-left: 76px;
 
   @media (min-width: @tablet) {
-    padding: 0;
+    margin-left: 0;
+    padding-top: 20px;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+  }
+
+  @media (min-width: @desktop) {
+    padding-top: 33px;
   }
 }

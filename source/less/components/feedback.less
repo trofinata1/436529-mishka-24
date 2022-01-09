@@ -3,8 +3,20 @@
 }
 
 .feedback__text {
-  margin: 0;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 33px;
+  margin-left: 0;
   line-height: 30px;
+
+  @media (min-width: @tablet) {
+    margin-bottom: 58px;
+  }
+
+  @media (min-width: @desktop) {
+    width: 93%;
+    margin-bottom: 40px;
+  }
 }
 
 .feedback__author {
@@ -12,15 +24,32 @@
   font-style: normal;
   font-size: 17px;
   color: @font-dark;
+
+  @media (min-width: @tablet) {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  @media (min-width: @desktop) {
+    font-size: 17px;
+  }
 }
 
 .feedback__link {
   position: relative;
   display: block;
+  margin-top: 3px;
+  margin-bottom: 30px;
   font-weight: 400;
   line-height: 30px;
   color: @font-base;
   text-decoration: none;
+
+  @media (min-width: @tablet) {
+    margin-top: 0;
+    margin-bottom: 45px;
+    font-size: 17px;
+  }
 
   &:hover {
     color: @special-link-interaction;

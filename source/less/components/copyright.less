@@ -1,13 +1,28 @@
 .copyright__text {
-  margin: 0;
+  margin-top: 0;
+  margin-right: 25px;
+  margin-bottom: 0;
+  margin-left: auto;
   font-weight: 700;
   font-size: 19px;
   line-height: 18px;
   color: @font-dark;
+
+  @media (min-width: @tablet) {
+    margin-right: 22px;
+    margin-bottom: 10px;
+  }
 }
 
 .copyright__link {
   .flex-center;
+  margin-right: auto;
+  padding: 5px;
+
+  @media (min-width: @tablet) {
+    margin-top: -5px;
+    margin-right: -5px;
+  }
 
   &:hover {
     .copyright__icon {

@@ -1,28 +1,34 @@
 .promo {
   .margin-mobile;
   position: relative;
-  margin-top: 31px;
+  margin-top: 35px;
+  margin-bottom: 73px;
 
   @media (min-width: @tablet) {
     .margin-tablet;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, auto) 52px;
+    margin-top: 53px;
   }
 
   @media (min-width: @desktop) {
     .content-center;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 118px repeat(3, auto) 52px;
+    grid-template-rows: 120px repeat(3, auto) 52px;
     margin-top: 54px;
   }
 
   &::after {
     .decor;
-    bottom: -52px;
+    bottom: -43px;
+
+    @media (min-width: @tablet) {
+      bottom: -70px;
+    }
 
     @media (min-width: @desktop) {
-      bottom: -73px;
+      bottom: -96px;
     }
   }
 }
@@ -43,8 +49,10 @@
     grid-column-end: 5;
     grid-row-start: 1;
     grid-row-end: 2;
-    margin-right: 13px;
+    margin-top: 6px;
+    margin-right: 25px;
     margin-left: auto;
+    line-height: 17px;
     text-align: center;
     white-space: pre-line;
   }
@@ -52,8 +60,10 @@
   @media (min-width: @desktop) {
     grid-column-start: 1;
     grid-column-end: 2;
+    justify-self: start;
     align-self: end;
+    margin-top: 0;
     margin-right: 0;
-    margin-left: 32px;
+    margin-left: 45px;
   }
 }

@@ -55,12 +55,20 @@
   }
 
   &--square {
-    width: 33%;
-    margin-bottom: 0;
+    .flex-center;
+    box-sizing: border-box;
+    width: 32%;
+    min-height: 52px;
+    margin-bottom: 31px;
     padding-left: 0;
+    border: 2px solid @font-base-opacity;
 
-    + .form__input {
-      .visually-hidden;
+    @media (min-width: @tablet) {
+      width: 112px;
+    }
+
+    &:hover {
+      border-color: @font-base-opacity-light;
     }
   }
 
@@ -188,7 +196,6 @@
     grid-row-start: 6;
     grid-row-end: 7;
     align-self: flex-start;
-    min-width: 230px;
     margin-left: 0;
   }
 
@@ -339,6 +346,10 @@
     + .form__label::after {
       display: block;
     }
+
+    + .form__label--square {
+      border-color: @special;
+    }
   }
 
   &:focus {
@@ -348,10 +359,14 @@
   }
 
   &--radio,
-  &--checkbox {
+  &--checkbox,
+  &--square {
     .visually-hidden;
+  }
 
-    + .form__label {
+  &--radio,
+  &--checkbox {
+    & + .form__label {
       padding-left: 60px;
     }
   }

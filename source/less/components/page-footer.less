@@ -23,15 +23,19 @@
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 2;
+    margin-bottom: 7px;
   }
 }
 
 .page-footer__copyright {
-  .flex-center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   grid-column-start: 2;
   grid-column-end: 3;
   grid-row-start: 2;
   grid-row-end: 3;
+  border-top: @border-gray;
 
   @media (min-width: @tablet) {
     grid-column-start: 4;

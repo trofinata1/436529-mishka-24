@@ -9,37 +9,62 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(3, 1fr);
+    row-gap: 24px;
+    font-size: 20px;
+    line-height: 22px;
   }
 
-  @media (min-width: @tablet) {
+  @media (min-width: @desktop) {
     grid-column-start: 2;
-    grid-column-end: 7;
+    grid-column-end: 6;
     grid-row-start: 2;
     grid-row-end: 5;
-    column-gap: 85px;
-    row-gap: 59px;
+    column-gap: 0;
+    row-gap: 20px;
   }
 }
 
 .advantages-list__item {
+  white-space: pre-wrap;
   background-position: left top;
   background-repeat: no-repeat;
 
   &--ecology {
+    margin-bottom: 30px;
+    padding-top: 54px;
     background-image: url("../img/about/ecology.svg");
+    background-position: 8px top;
+
+    @media (min-width: @tablet) {
+      margin-bottom: 0;
+      padding-top: 58px;
+    }
+
+    @media (min-width: @desktop) {
+      padding-top: 55px;
+    }
   }
 
   &--style {
+    padding-top: 53px;
+    margin-bottom: 35px;
     background-image: url("../img/about/style.svg");
 
     @media (min-width: @tablet) {
       grid-column-start: 1;
       grid-column-end: 2;
     }
+
+    @media (min-width: @desktop) {
+      margin-bottom: 41px;
+    }
   }
 
   &--like {
+    margin-bottom: 32px;
+    padding-top: 48px;
     background-image: url("../img/about/like.svg");
+    background-position: 7px top;
 
     @media (min-width: @tablet) {
       grid-column-start: 1;
@@ -48,17 +73,31 @@
   }
 
   &--love {
+    margin-bottom: 33px;
+    padding-top: 51px;
     background-image: url("../img/about/love.svg");
+    background-position: 3px top;
 
     @media (min-width: @tablet) {
       grid-column-start: 2;
       grid-column-end: 3;
       grid-row-start: 1;
       grid-row-end: 2;
+      margin-top: 5px;
+      padding-top: 54px;
+    }
+
+    @media (min-width: @desktop) {
+      margin-top: 3px;
+      padding-top: 52px;
     }
   }
 
   &--domestic {
+    margin-bottom: 32px;
+    margin-left: -6px;
+    padding-top: 49px;
+    padding-left: 6px;
     background-image: url("../img/about/domestic.svg");
 
     @media (min-width: @tablet) {
@@ -66,10 +105,17 @@
       grid-column-end: 3;
       grid-row-start: 2;
       grid-row-end: 3;
+      padding-top: 53px;
     }
   }
 
   &--gift {
+    padding-top: 52px;
     background-image: url("../img/about/gift.svg");
+    background-position: 3px top;
+
+    @media (min-width: @tablet) {
+      margin-top: -5px;
+    }
   }
 }

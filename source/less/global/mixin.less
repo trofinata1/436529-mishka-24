@@ -9,6 +9,16 @@
   background-repeat: repeat-x;
 }
 
+.wave-wide {
+  background-image: url("../img/decorations/wave-wide.svg");
+  background-repeat: repeat-x;
+}
+
+.wave-wide-desktop {
+  background-image: url("../img/decorations/wave-wide-desktop.svg");
+  background-repeat: repeat-x;
+}
+
 .reset-list {
   margin: 0;
   padding: 0;
@@ -60,7 +70,7 @@
   position: absolute;
   top: 0;
   bottom: 0;
-  right: 0;
+  right: -2px;
   width: 1px;
 }
 
@@ -79,13 +89,17 @@
   height: 6px;
 
   @media (min-width: @tablet) {
+    .wave-wide;
     right: -50px;
     left: -50px;
+    height: 17px;
   }
 
   @media (min-width: @desktop) {
+    .wave-wide-desktop;
     right: 0;
     left: 0;
+    height: 23px;
   }
 }
 
@@ -108,4 +122,10 @@
   border-top: none;
   border-right: none;
   border-left: none;
+}
+
+.link-underline {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-color: @special-decoration;
 }

@@ -16,7 +16,7 @@
 
 .categories-list__item {
   @media (min-width: @tablet) {
-    flex-grow: 1;
+    width: 50%;
   }
 }
 
@@ -33,6 +33,12 @@
   text-decoration: none;
   white-space: pre-line;
   background-repeat: no-repeat;
+
+  @media (min-width: @tablet) {
+    padding-left: 36px;
+    font-size: 20px;
+    line-height: 30px;
+  }
 
   &:hover {
     .categories-list__icon {
@@ -56,54 +62,71 @@
 
   &--interior {
     padding-top: 23px;
+    padding-right: 35px;
     padding-bottom: 18px;
     background-color: @special;
+
+    @media (min-width: @tablet) {
+      padding-top: 25px;
+      padding-bottom: 25px;
+    }
 
     &:hover {
       padding-top: 18px;
       padding-bottom: 23px;
-      background-position: top 15px right 30px;
       box-shadow: @category-shadow-interior;
+
+      @media (min-width: @tablet) {
+        padding-top: 20px;
+        padding-bottom: 30px;
+      }
     }
 
     &:focus {
       padding-top: 18px;
       padding-bottom: 23px;
-      background-position: top 15px right 30px;
       box-shadow: @category-shadow-interior;
     }
 
     &:active {
       padding-top: 18px;
       padding-bottom: 23px;
-      background-position: top 15px right 30px;
       box-shadow: @category-shadow-interior;
     }
   }
 
   &--toys {
     padding-top: 21px;
+    padding-right: 28px;
     padding-bottom: 22px;
     background-color: @category-toys;
+
+    @media (min-width: @tablet) {
+      padding-top: 25px;
+      padding-right: 32px;
+      padding-bottom: 27px;
+    }
 
     &:hover {
       padding-top: 16px;
       padding-bottom: 27px;
-      background-position: top 16px right 30px;
       box-shadow: @category-shadow-toys;
+
+      @media (min-width: @tablet) {
+        padding-top: 20px;
+        padding-bottom: 32px;
+      }
     }
 
     &:focus {
       padding-top: 16px;
       padding-bottom: 27px;
-      background-position: top 16px right 30px;
       box-shadow: @category-shadow-toys;
     }
 
     &:active {
       padding-top: 16px;
       padding-bottom: 27px;
-      background-position: top 16px right 30px;
       box-shadow: @category-shadow-toys;
     }
   }
@@ -111,4 +134,8 @@
 
 .categories-list__icon {
   opacity: 0.5;
+
+  @media (min-width: @tablet) {
+    padding-top: 7px;
+  }
 }

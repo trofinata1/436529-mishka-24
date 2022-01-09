@@ -1,35 +1,93 @@
 .main-title-wrapper {
+  padding-top: 72px;
+  padding-bottom: 73px;
   text-align: center;
   background-color: @bg-gray;
   background-repeat: no-repeat;
 
+  @media (min-width: @tablet) {
+    padding-top: 12px;
+    padding-bottom: 75px;
+  }
+
   @media (min-width: @desktop) {
     grid-column-start: 1;
     grid-column-end: 9;
+    padding-top: 14px;
+    padding-bottom: 95px;
   }
 
   &--image {
+    padding-top: 73px;
+    padding-bottom: 120px;
     background-image: url("../img/bg/bg-title.jpg");
-    background-position: center;
+    background-position: center 18%;
+    background-size: cover;
+    background-color: @bg-gray-light;
+  }
+
+  @media (min-width: @tablet) {
+    padding-top: 65px;
+    padding-bottom: 372px;
+    background-position: center 44%;
+    background-size: 84%;
+  }
+
+  @media (min-width: @desktop) {
+    padding-top: 70px;
+    padding-bottom: 355px;
+    background-position: center 43%;
+    background-size: 56%;
+  }
+
+  &--wave {
+    @media (min-width: @tablet) {
+      position: relative;
+    }
+
+    &::after {
+      @media (min-width: @tablet) {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 24px;
+        right: 0;
+        bottom: -12px;
+        left: 0;
+        background-image: url("../img/decorations/wave-fill.svg");
+        z-index: 1;
+      }
+
+      @media (min-width: @desktop) {
+        bottom: -20px;
+        height: 34px;
+        background-image: url("../img/decorations/wave-big.svg");
+      }
+    }
   }
 }
 
 .main-title-wrapper__main-title {
+  .margin-mobile;
   margin-top: 0;
-  margin-right: 30px;
   margin-bottom: 0;
-  margin-left: 30px;
   font-weight: 700;
   font-size: 27px;
   line-height: 30px;
   color: @font-dark;
+  white-space: pre-line;
 
   @media (min-width: @tablet) {
-    margin-right: 50px;
-    margin-left: 50px;
+    .margin-tablet;
+    font-size: 43px;
+    line-height: 50px;
+    white-space: normal;
   }
 
   @media (min-width: @desktop) {
     .content-center;
+    max-width: 700px;
+    font-size: 53px;
+    line-height: 57px;
   }
 }
