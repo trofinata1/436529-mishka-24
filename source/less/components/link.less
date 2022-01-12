@@ -1,13 +1,15 @@
 .link {
   text-decoration: none;
   color: @font-dark;
+  outline: transparent;
 
   &:hover {
     color: @font-dark-hover;
   }
 
   &:focus {
-    .outline-radius;
+    text-decoration: underline;
+    text-decoration-color: @special;
     color: @special;
   }
 

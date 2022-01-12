@@ -9,12 +9,27 @@
     grid-row-end: 3;
     display: flex;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
+    min-width: 404px;
+    font-size: 15px;
+    line-height: 24px;
     font-weight: 700;
     color: @font-dark;
+    background-color: @bg-gray-light;
+  }
+
+  &--dark {
+    @media (min-width: @desktop) {
+      background-color: @bg-gray;
+    }
   }
 }
 
 .optional-list__item {
   width: 50%;
+  padding-top: 20px;
+
+  &:last-child {
+    margin-left: 38px;
+  }
 }

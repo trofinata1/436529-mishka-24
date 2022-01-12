@@ -1,12 +1,13 @@
 .cart {
   .shadow;
-  // display: flex; Появляется при открытии меню
+  display: none; // display: flex; Появляется при открытии меню
   grid-row-start: 3;
   grid-row-end: 4;
   align-items: center;
-  height: 100%;
+  padding-top: 29px;
   padding-right: 30px;
-  padding-left: 76px;
+  padding-bottom: 26px;
+  padding-left: 30px;
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
@@ -23,6 +24,10 @@
     height: 100%;
     padding: 0;
     box-shadow: none;
+  }
+
+  @media (min-width: @desktop) {
+    min-width: 267px;
   }
 
   &:hover {
@@ -50,6 +55,11 @@
   opacity: 0.2;
 
   @media (min-width: @tablet) {
-    margin: 0;
+    margin-right: 31px;
+  }
+
+  @media (min-width: @desktop) {
+    margin-right: 0;
+    margin-left: 32px;
   }
 }

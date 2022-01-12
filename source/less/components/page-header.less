@@ -6,6 +6,7 @@
   @media (min-width: @tablet) {
     grid-template-columns: 48px 1fr 50px;
     grid-template-rows: 1fr 1fr;
+    background-image: linear-gradient(@font-opposite 50%, @bg-gray-light 50%);
     box-shadow: none;
     z-index: 1;
   }
@@ -25,13 +26,20 @@
       height: 1px;
     }
   }
+
+  &--dark {
+    @media (min-width: @tablet) {
+      background-image: linear-gradient(@font-opposite 50%, @bg-gray 50%);
+    }
+  }
 }
 
 .page-header__logo {
   justify-self: center;
   width: 86px;
   margin-top: 22px;
-  margin-bottom: 22px;
+  margin-bottom: 17px;
+  margin-right: 2px;
 
   @media (min-width: @tablet) {
     position: relative;
@@ -41,6 +49,7 @@
     grid-row-end: 2;
     justify-self: start;
     align-self: start;
+    width: 114px;
     margin-bottom: 20px;
     z-index: 1;
   }
@@ -49,8 +58,9 @@
     grid-column-start: 2;
     grid-column-end: 3;
     justify-self: center;
+    width: 149px;
     margin-top: 9px;
-    margin-bottom: 7px;
+    margin-bottom: 0;
   }
 
   &:hover {
@@ -64,5 +74,31 @@
 
   &:active {
     opacity: 0.3;
+  }
+}
+
+.page-header__logo-icon {
+  @media (min-width: @tablet) {
+    display: none;
+  }
+
+  &--tablet {
+    display: none;
+
+    @media (min-width: @tablet) {
+      display: block;
+    }
+
+    @media (min-width: @desktop) {
+      display: none;
+    }
+  }
+
+  &--desktop {
+    display: none;
+
+    @media (min-width: @desktop) {
+      display: block;
+    }
   }
 }

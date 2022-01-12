@@ -1,12 +1,7 @@
 .page-main {
+  position: relative;
   flex-grow: 1;
-
-  &--form {
-    @media (min-width: @desktop) {
-      display: grid;
-      grid-template-columns: 1fr repeat(6, 175px) 1fr;
-    }
-  }
+  z-index: 1;
 }
 
 .page-main__description {
@@ -17,8 +12,9 @@
 
   @media (min-width: @tablet) {
     .margin-tablet;
-    margin-top: 54px;
+    margin-top: 66px;
     margin-bottom: 13px;
+    font-size: 17px;
   }
 
   @media (min-width: @desktop) {
