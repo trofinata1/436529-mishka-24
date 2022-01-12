@@ -21,35 +21,75 @@
     padding-top: 72px;
     padding-bottom: 120px;
     background-image: url("../img/bg/bg-title.jpg");
-    background-position: center -18px;
+    background-position: 50% 40%;
     background-size: cover;
     background-color: @bg-gray-light;
-  }
 
-  @media (min-width: 321px) and (max-width: 499px) {
-    background-position: center -45px;
-  }
+    @media (min-width: 350px) {
+      background-size: calc(100vw - 20%);
+    }
 
-  @media (min-width: 500px) and (max-width: 650px) {
-    background-position: center -45px;
-    background-size: 60%;
-  }
+    @media (min-width: 420px) {
+      background-size: calc(100vw - 30%);
+    }
 
-  @media (min-width: 651px) and (max-width: 767px) {
-    background-position: center -90px;
-  }
+    @media (min-width: 500px) {
+      background-size: calc(100vw - 40%);
+    }
 
-  @media (min-width: @tablet) {
-    padding-top: 68px;
-    padding-bottom: 371px;
-    background-image: url("../img/bg/bg-title-tablet.jpg");
-    background-position: center -89px;
-  }
+    @media (min-width: 590px) {
+      background-size: calc(100vw - 50%);
+    }
 
-  @media (min-width: @desktop) {
-    padding-top: 70px;
-    padding-bottom: 355px;
-    background-image: url("../img/bg/bg-title-desktop.jpg");
+    @media (min-width: 690px) {
+      background-size: calc(100vw - 55%);
+    }
+
+    @media (min-width: @tablet) {
+      padding-top: 68px;
+      padding-bottom: 371px;
+      background-image: url("../img/bg/bg-title-tablet.jpg");
+      background-size: 100%;
+    }
+
+    @media (min-width: 800px) {
+      background-size: calc(100vw - 20%);
+    }
+
+    @media (min-width: 990px) {
+      background-size: calc(100vw - 30%);
+    }
+
+    @media (min-width: 1020px) {
+      background-size: calc(100vw - 35%);
+    }
+
+    @media (min-width: 1100px) {
+      background-size: calc(100vw - 40%);
+    }
+
+    @media (min-width: @desktop) {
+      padding-top: 70px;
+      padding-bottom: 355px;
+      background-image: url("../img/bg/bg-title-desktop.jpg");
+      background-size: 100%;
+    }
+
+    @media (min-width: 1180px) {
+      background-size: calc(100vw - 20%);
+    }
+
+    @media (min-width: 1500px) {
+      background-size: calc(100vw - 30%);
+    }
+
+    @media (min-width: 1700px) {
+      background-size: calc(100vw - 40%);
+    }
+
+    @media (min-width: 2000px) {
+      background-size: contain;
+    }
   }
 
   &--wave {
