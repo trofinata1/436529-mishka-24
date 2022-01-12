@@ -41,7 +41,7 @@
 
     .main-nav__toggle {
       bottom: -30px;
-      right: 26px;
+      right: 25px;
       width: 21px;
       height: 20px;
       padding-top: 3px;
@@ -51,6 +51,7 @@
     .main-nav__toggle::before,
     .main-nav__toggle::after {
       display: block;
+      margin-left: -13px;
     }
   }
 }
@@ -59,13 +60,14 @@
   .reset-button;
   position: absolute;
   top: -51px;
-  right: 28px;
+  right: 25px;
   width: 20px;
   height: 14px;
   box-sizing: content-box;
   padding-top: 3px;
   padding-bottom: 5px;
   cursor: pointer;
+  overflow: hidden;
 
   @media (min-width: @tablet) {
     display: none;
@@ -110,6 +112,7 @@
   }
 
   &::before {
+    margin-left: -11px;
     transform: rotate(45deg);
   }
 
