@@ -142,7 +142,11 @@
               <td class="product__parameters-cell">15 см</td>
             </tr>
           </table>
-          <img  class="product__image" src="img/promo/basket.png" alt="Три вязаных крючком корзинки разных размеров, две серо-зелёных и одна бело-розовая, вкладываются в друг друга по типу матрёшки." width="260" height="315">
+          <picture>
+            <source media="(min-width: @desktop)" srcset="img/promo/basket-desktop@1x.jpg, img/promo/basket-desktop@2x.jpg 2x">
+            <source media="(min-width: @tablet)" srcset="img/promo/basket-tablet@1x.jpg, img/promo/basket-tablet@2x.jpg 2x">
+            <img  class="product__image" src="img/promo/basket@1x.jpg" srcset="img/promo/basket@2x.jpg 2x" alt="Три вязаных крючком корзинки разных размеров, две серо-зелёных и одна бело-розовая, вкладываются в друг друга по типу матрёшки." width="260" height="315">
+          </picture>
           <p class="product__price">Цена: 990 руб.</p>
           <button class="button product__button" type="button">Заказать</button>
         </div>
@@ -290,21 +294,6 @@
         <button class="form__button button--color button" type="submit">Добавить</button>
       </form>
     </div>
-<<<<<<< HEAD
     <script src="js/script/script.js"></script>
-=======
-    <script>
-      var navMain = document.querySelector('.main-nav');
-      var navToggle = document.querySelector('.main-nav__toggle');
-
-      navToggle.addEventListener('click', function() {
-        if (navMain.classList.contains('main-nav--opened')) {
-          navMain.classList.remove('main-nav--opened');
-        } else {
-          navMain.classList.add('main-nav--opened');
-        }
-      });
-    </script>
->>>>>>> 4b06264 (Декоративные элементы и мелкие сетки главной страницы)
   </body>
 </html>

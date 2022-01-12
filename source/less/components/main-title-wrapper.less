@@ -20,10 +20,14 @@
   &--image {
     padding-top: 72px;
     padding-bottom: 120px;
-    background-image: url("/img/bg/bg-title.jpg");
+    background-image: url("/img/bg/bg-title@1x.jpg");
     background-position: 50% 40%;
     background-size: cover;
     background-color: @bg-gray-light;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("/img/bg/bg-title@2x.jpg");
+    }
 
     @media (min-width: 350px) {
       background-size: calc(100vw - 20%);
@@ -48,8 +52,12 @@
     @media (min-width: @tablet) {
       padding-top: 68px;
       padding-bottom: 371px;
-      background-image: url("/img/bg/bg-title-tablet.jpg");
+      background-image: url("/img/bg/bg-title-tablet@1x.jpg");
       background-size: 100%;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("/img/bg/bg-title-tablet@2x.jpg");
+      }
     }
 
     @media (min-width: 800px) {
@@ -71,8 +79,12 @@
     @media (min-width: @desktop) {
       padding-top: 70px;
       padding-bottom: 355px;
-      background-image: url("/img/bg/bg-title-desktop.jpg");
+      background-image: url("/img/bg/bg-title-desktop@1x.jpg");
       background-size: 100%;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("/img/bg/bg-title-desktop@2x.jpg");
+      }
     }
 
     @media (min-width: 1180px) {

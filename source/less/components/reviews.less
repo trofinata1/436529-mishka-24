@@ -13,10 +13,15 @@
     padding-top: 80px;
     padding-bottom: 0;
     padding-left: 50px;
-    background-image: url("/img/bg/bg-review.png");
+    background-image: url("/img/bg/bg-review@1x.png");
     background-position: top left;
     background-repeat: no-repeat;
+    background-size: 350px 457px;
     object-fit: cover;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/bg/bg-review@2x.png");
+    }
   }
 
   @media (min-width: @desktop) {
