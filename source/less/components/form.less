@@ -148,7 +148,7 @@
     white-space: pre-wrap;
 
     @media (min-width: @tablet) {
-      min-height: 52px;
+      min-height: 50px;
       white-space: normal;
     }
 
@@ -162,16 +162,16 @@
 
     &::before {
       left: 0;
-      width: 41px;
-      height: 41px;
-      margin-top: -21px;
+      width: 40px;
+      height: 40px;
+      margin-top: -20px;
       border: 2px solid @font-base;
 
       @media (min-width: @tablet) {
         left: 2px;
         width: 51px;
-        height: 51px;
-        margin-top: -26px;
+        height: 50px;
+        margin-top: -25px;
       }
 
       @media (min-width: @desktop) {
@@ -285,12 +285,14 @@
     grid-row-end: 7;
     align-self: flex-start;
     min-width: 230px;
+    margin-top: 1px;
     margin-left: 0;
   }
 
   @media (min-width: @desktop) {
     grid-column-start: 3;
     grid-column-end: 5;
+    margin-top: 0;
   }
 }
 
@@ -532,8 +534,6 @@
 
   &--tel,
   &--email {
-    padding-bottom: 13px;
-
     @media (min-width: @tablet) {
       grid-column-start: 2;
       grid-column-end: 5;
@@ -551,9 +551,11 @@
 
   &--tel {
     margin-bottom: 34px;
+    padding-bottom: 14px;
 
     @media (min-width: @tablet) {
       margin-bottom: 0;
+      padding-bottom: 15px;
     }
   }
 
@@ -568,19 +570,52 @@
 
   &--email {
     padding-top: 17px;
+    padding-bottom: 12px;
+
+    @media (min-width: @tablet) {
+      padding-bottom: 14px;
+    }
   }
 
   &--message {
     box-sizing: border-box;
     min-height: 142px;
-    margin-top: 21px;
+    margin-top: 24px;
     padding-top: 16px;
     padding-left: 16px;
     border: @border-base;
 
     @media (min-width: @tablet) {
-      margin-top: -35px;
+      margin-top: -36px;
       margin-left: 0;
+    }
+
+    @media (min-width: @desktop) {
+      margin-top: -35px;
+    }
+  }
+
+  &--name {
+    @media (min-width: @tablet) {
+      padding-bottom: 12px;
+    }
+
+    @media (min-width: @desktop) {
+      padding-bottom: 10px;
+    }
+  }
+
+  &--surname {
+    @media (min-width: @tablet) {
+      padding-bottom: 11px;
+    }
+  }
+
+  &--patronymic {
+    padding-bottom: 9px;
+
+    @media (min-width: @tablet) {
+      padding-bottom: 8px;
     }
   }
 }
@@ -647,6 +682,7 @@
 }
 
 .form__message {
+  margin-top: -2px;
   margin-bottom: 17px;
 
   @media (min-width: @tablet) {
@@ -657,7 +693,8 @@
   }
 
   @media (min-width: @desktop) {
-    padding-bottom: 50px;
+    padding-top: 52px;
+    padding-bottom: 49px;
   }
 }
 
