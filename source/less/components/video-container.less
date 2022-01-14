@@ -1,17 +1,34 @@
 .video-container {
   width: 100%;
+  background-image: url("../img/video/video@1x.jpg");
   object-fit: cover;
   object-position: 50% 50%;
+  background-size: 100%;
+  background-repeat: no-repeat;
   background-color: @bg-gray;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/video/video@2x.jpg");
+  }
 
   @media (min-width: @tablet) {
     order: 0;
     height: 455px;
+    background-image: url("../img/video/video-tablet@1x.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/video/video-tablet@2x.jpg");
+    }
   }
 
   @media (min-width: @desktop) {
     grid-row-start: 1;
     grid-row-end: 4;
     width: 682px;
+    background-image: url("../img/video/video-desktop@1x.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/video/video-desktop@2x.jpg");
+    }
   }
 }
