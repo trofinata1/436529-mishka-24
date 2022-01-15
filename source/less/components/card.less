@@ -4,9 +4,31 @@
 }
 
 .card__title {
-  margin: 0;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 7px;
+  margin-left: 0;
   font-size: 17px;
+  white-space: pre-wrap;
   color: @font-dark;
+
+  @media (min-width: @tablet) {
+    margin-bottom: 5px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  @media (min-width: @desktop) {
+    margin-bottom: 0;
+  }
+
+  &--long {
+    margin-bottom: 8px;
+
+    @media (min-width: @desktop) {
+      margin-bottom: 10px;
+    }
+  }
 }
 
 .card__image {
@@ -28,11 +50,21 @@
 }
 
 .card__info {
+  padding-top: 27px;
+  padding-right: 22px;
+  padding-bottom: 26px;
+  padding-left: 28px;
+  border: 1px solid @line-separator;
+
   @media (min-width: @tablet) {
     display: flex;
     flex-direction: column;
     align-self: stretch;
     width: 100%;
+    padding-top: 25px;
+    padding-right: 27px;
+    padding-bottom: 23px;
+    padding-left: 33px;
   }
 
   @media (min-width: @desktop) {
@@ -40,33 +72,77 @@
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, auto);
     height: 100%;
+    box-sizing: border-box;
+    padding-top: 25px;
+    padding-right: 29px;
+    padding-bottom: 22px;
+    padding-left: 27px;
+  }
+
+  &--long-title {
+    padding-top: 24px;
   }
 }
 
 .card__parameters {
-  margin: 0;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 17px;
+  margin-left: 0;
   font-size: 13px;
   line-height: 30px;
+
+  @media (min-width: @tablet) {
+    font-size: 15px;
+  }
+
+  @media (min-width: @desktop) {
+    margin-top: -4px;
+    margin-bottom: 14px;
+  }
+
+  &--high {
+    @media (min-width: @tablet) {
+      padding-top: 5px;
+    }
+  }
 }
 
 .card__order {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-top: 22px;
+  border-top: 1px solid @line-separator;
 
   @media (min-width: @tablet) {
     margin-top: auto;
+    padding-top: 20px;
+  }
+
+  @media (min-width: @desktop) {
+    padding-top: 19px;
   }
 }
 
 .card__price {
   margin: 0;
   padding: 0;
+  font-weight: 700;
   color: @font-dark;
 }
 
 .card__button {
   .reset-button;
+
+  @media (min-width: @tablet) {
+    align-self: flex-start;
+  }
+
+  @media (min-width: @desktop) {
+    margin-top: 4px;
+    padding: 0;
+  }
 
   &:hover {
     .card__button-icon {

@@ -2,6 +2,13 @@
   position: relative;
   flex-grow: 1;
   z-index: 1;
+
+  &--form {
+    @media (min-width: @desktop) {
+      display: grid;
+      grid-template-columns: 1fr repeat(6, 175px) 1fr;
+    }
+  }
 }
 
 .page-main__description {
@@ -20,9 +27,10 @@
   @media (min-width: @desktop) {
     grid-column-start: 3;
     grid-column-end: 7;
-    margin-top: 98px;
-    margin-right: auto;
-    margin-left: auto;
+    margin-top: 116px;
+    margin-right: 0;
+    margin-bottom: 15px;
+    margin-left: 0;
   }
 }
 

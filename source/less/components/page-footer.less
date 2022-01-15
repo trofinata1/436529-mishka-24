@@ -29,6 +29,26 @@
   @media (min-width: @desktop) {
     margin-bottom: 8px;
   }
+
+  &:hover {
+    .page-footer__logo-icon {
+      fill: @special-link-interaction;
+    }
+  }
+
+  &:focus {
+    outline: none;
+
+    .page-footer__logo-icon {
+      .outline-radius;
+    }
+  }
+
+  &:active {
+    .page-footer__logo-icon {
+      fill: @special-link-interaction-active;
+    }
+  }
 }
 
 .page-footer__copyright {
