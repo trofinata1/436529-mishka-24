@@ -11,7 +11,7 @@
 
   @media (min-width: @desktop) {
     grid-template-columns: 175px repeat(2, 1fr) 58px repeat(3, 175px);
-    grid-template-rows: repeat(5, auto);
+    grid-template-rows: minmax(135px, auto) minmax(150px, auto) minmax(180px, auto) minmax(105px, auto) auto;
     grid-column-start: 1;
     grid-column-end: 7;
   }
@@ -49,6 +49,7 @@
     grid-column-start: 2;
     grid-column-end: 7;
     align-self: end;
+    margin-top: 0;
     margin-bottom: 0;
     z-index: 1;
   }
@@ -140,8 +141,9 @@
   @media (min-width: @desktop) {
     grid-column-start: 2;
     grid-column-end: 4;
-    max-height: 116px;
-    margin-top: -8px;
+    align-self: center;
+    min-height: 116px;
+    margin-top: 0;
     margin-bottom: 0;
   }
 }
@@ -194,8 +196,9 @@
   @media (min-width: @desktop) {
     grid-column-start: 2;
     grid-column-end: 4;
-    align-self: center;
-    margin-top: 15px;
+    align-self: end;
+    margin-top: 0;
+    margin-bottom: 0;
   }
 }
 

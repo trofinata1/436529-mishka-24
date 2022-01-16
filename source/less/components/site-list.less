@@ -1,4 +1,5 @@
 .site-list {
+  position: relative;
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
@@ -28,6 +29,13 @@
     box-sizing: border-box;
   }
 
+  &::after {
+    @media (min-width: @desktop) {
+      .separator-vertical;
+      display: none; //Задается всем элементам списка, т.к. при переполнении кол-вом элементов возможен перенос. Чтобы в этом случае не прерывалась вертикальная линия - включить псевдоэлемент у соответствующего элемента
+    }
+  }
+
   &--catalog {
     position: relative;
 
@@ -42,7 +50,7 @@
 
     &::after {
       @media (min-width: @desktop) {
-        .separator-vertical;
+        display: block;
       }
     }
   }
