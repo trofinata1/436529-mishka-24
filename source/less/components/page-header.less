@@ -6,31 +6,13 @@
   @media (min-width: @tablet) {
     grid-template-columns: 48px 1fr 50px;
     grid-template-rows: 1fr 1fr;
-    background-image: linear-gradient(@font-opposite 50%, @bg-gray-light 50%);
     box-shadow: none;
-    z-index: 1;
+    z-index: 2;
   }
 
   @media (min-width: @desktop) {
     grid-template-columns: 1fr @content 1fr;
-  }
-
-  &::after {
-    @media (min-width: @tablet) {
-      .header-line;
-      content: "";
-      position: absolute;
-      top: 50%;
-      right: 0;
-      left: 0;
-      height: 1px;
-    }
-  }
-
-  &--dark {
-    @media (min-width: @tablet) {
-      background-image: linear-gradient(@font-opposite 50%, @bg-gray 50%);
-    }
+    overflow: hidden;
   }
 }
 
@@ -42,7 +24,6 @@
   margin-right: 2px;
 
   @media (min-width: @tablet) {
-    position: relative;
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 1;

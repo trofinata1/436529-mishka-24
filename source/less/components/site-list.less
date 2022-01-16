@@ -19,7 +19,7 @@
   @media (min-width: @tablet) {
     display: flex;
     align-items: flex-start;
-    height: 100%;
+    align-self: stretch;
     padding: 0;
     box-shadow: none;
   }
@@ -64,6 +64,8 @@
   }
 
   @media (min-width: @desktop) {
+    box-sizing: border-box;
     padding-top: 33px;
+    padding-bottom: 5px;
   }
 }

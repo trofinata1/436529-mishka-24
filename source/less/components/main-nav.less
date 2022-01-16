@@ -13,7 +13,7 @@
   @media (min-width: @tablet) {
     position: static;
     grid-template-columns: 24% 24% 82px 1fr;
-    grid-template-rows: repeat(2, 88px);
+    grid-template-rows: repeat(2, minmax(88px, auto));
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 1;
@@ -22,7 +22,7 @@
   }
 
   @media (min-width: @desktop) {
-    grid-template-columns: auto 1fr 82px auto;
+    grid-template-columns: 1fr 1fr 82px 1fr;
   }
 
   &--opened {
@@ -137,7 +137,9 @@
   justify-self: flex-start;
 
   @media (min-width: @tablet) {
+    position: relative;
     display: flex;
+    flex-wrap: wrap;
     justify-content: flex-start;
     justify-self: flex-start;
     align-items: center;
@@ -156,6 +158,31 @@
     background-color: @font-opposite;
   }
 
+  &::before {
+    @media (min-width: @tablet) {
+      .header-ears;
+      right: 100%;
+      left: -50px;
+    }
+
+    @media (min-width: @desktop) {
+      display: none;
+    }
+  }
+
+  &::after {
+    @media (min-width: @tablet) {
+      .header-menu-border;
+      right: 0;
+      left: -60px;
+      z-index: 4;
+    }
+
+    @media (min-width: @desktop) {
+      display: none;
+    }
+  }
+
   &--dark {
     @media (min-width: @tablet) {
       background-color: @bg-gray;
@@ -163,6 +190,18 @@
 
     @media (min-width: @desktop) {
       background-color: @font-opposite;
+    }
+
+    &::before {
+      @media (min-width: @tablet) {
+        .header-ears-dark;
+        right: 100%;
+        left: -50px;
+      }
+
+      @media (min-width: @desktop) {
+        display: none;
+      }
     }
   }
 }
@@ -172,6 +211,7 @@
   margin: 0;
 
   @media (min-width: @tablet) {
+    position: relative;
     display: grid;
     grid-column-start: 3;
     grid-column-end: 5;
@@ -189,13 +229,52 @@
 
   @media (min-width: @desktop) {
     grid-column-start: 2;
+    box-sizing: border-box;
+    padding-left: 10px;
     font-size: 15px;
     line-height: 24px;
+  }
+
+  &::before {
+    @media (min-width: @tablet) {
+      .header-ears;
+      left: 100%;
+      right: -50px;
+    }
+
+    @media (min-width: @desktop) {
+      right: calc((-100vw + @content) / 2);
+    }
+  }
+
+  &::after {
+    @media (min-width: @tablet) {
+      .header-menu-border;
+      right: -50px;
+      left: 0;
+      z-index: 4;
+    }
+
+    @media (min-width: @desktop) {
+      right: calc((-100vw + @content) / 2);
+    }
   }
 
   &--dark {
     @media (min-width: @tablet) {
       background-color: @bg-gray;
+    }
+
+    &::before {
+      @media (min-width: @tablet) {
+        .header-ears-dark;
+        left: 100%;
+        right: -50px;
+      }
+
+      @media (min-width: @desktop) {
+        right: calc((-100vw + @content) / 2);
+      }
     }
   }
 }

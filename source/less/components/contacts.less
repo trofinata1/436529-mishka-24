@@ -155,6 +155,8 @@
   }
 
   @media (min-width: @desktop) {
+    box-sizing: border-box;
+    padding-bottom: 20px;
     text-underline-offset: 13px;
   }
 
@@ -206,10 +208,12 @@
 
 .contacts__button {
   min-width: calc(100% - 60px);
+  max-width: calc(100% - 60px);
   margin: 0 auto;
 
   @media (min-width: @tablet) {
     min-width: 230px;
+    max-width: 230px;
   }
 
   @media (min-width: @desktop) {
