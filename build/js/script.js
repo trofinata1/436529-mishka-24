@@ -1,0 +1,1 @@
+var navMain=document.querySelector(".main-nav"),navToggle=document.querySelector(".main-nav__toggle");navToggle.addEventListener("click",(function(){navMain.classList.contains("main-nav--opened")?navMain.classList.remove("main-nav--opened"):navMain.classList.add("main-nav--opened")}));
