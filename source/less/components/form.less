@@ -99,6 +99,20 @@
     @media (min-width: @desktop) {
       padding-left: 63px;
     }
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 7px;
+      right: 0;
+      left: 60px;
+      height: 1px;
+      background-color: @special-decoration;
+
+      @media (min-width: @tablet) {
+        display: none;
+      }
+    }
   }
 
   &--square {
@@ -172,6 +186,11 @@
         width: 51px;
         height: 50px;
         margin-top: -25px;
+      }
+
+      @media (min-width: @desktop) {
+        width: 50px;
+        height: 50px;
       }
 
       @media (min-width: @desktop) {
@@ -534,6 +553,8 @@
 
   &--tel,
   &--email {
+    padding-bottom: 13px;
+
     @media (min-width: @tablet) {
       grid-column-start: 2;
       grid-column-end: 5;

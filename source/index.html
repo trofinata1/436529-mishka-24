@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Мишка</title>
-    <link rel="stylesheet" href="css/style.css">
-    <!-- ВРЕМЕННО, УДАЛИТЬ -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" href="/img/favicons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/img/favicons/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.webmanifest">
   </head>
   <body class="page__body">
     <header class="page-header">
@@ -142,7 +142,11 @@
               <td class="product__parameters-cell">15 см</td>
             </tr>
           </table>
-          <img  class="product__image" src="img/promo/basket.png" alt="Три вязаных крючком корзинки разных размеров, две серо-зелёных и одна бело-розовая, вкладываются в друг друга по типу матрёшки." width="260" height="315">
+          <picture>
+            <source media="(min-width: 1150px)" srcset="/img/promo/basket-desktop@1x.jpg, /img/promo/basket-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="/img/promo/basket-tablet@1x.jpg, /img/promo/basket-tablet@2x.jpg 2x">
+            <img class="product__image" src="/img/promo/basket@1x.jpg" srcset="/img/promo/basket@2x.jpg 2x" alt="Три вязаных крючком корзинки разных размеров, две серо-зелёных и одна бело-розовая, вкладываются в друг друга по типу матрёшки." width="260" height="315">
+          </picture>
           <p class="product__price">Цена: 990 руб.</p>
           <button class="button product__button" type="button">Заказать</button>
         </div>
