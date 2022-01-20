@@ -21,6 +21,4 @@ modalBackground.addEventListener('click', function(e) {
   if (e.target) {
     modal.classList.remove('modal--active');
   }
-
 });
-
