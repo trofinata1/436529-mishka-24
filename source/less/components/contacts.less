@@ -183,10 +183,22 @@
   display: block;
   width: 100%;
   margin-bottom: 42px;
+  background-image: url("/img/contacts/map-mobile@1x.png");
+  background-color: @bg-gray-light;
+  background-repeat: no-repeat;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("/img/contacts/map-mobile@2x.png");
+  }
 
   @media (min-width: @tablet) {
     height: 457px;
     margin-bottom: 53px;
+    background-image: url("/img/contacts/map-tablet@1x.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("/img/contacts/map-tablet@2x.png");
+    }
   }
 
   @media (min-width: @desktop) {
@@ -195,6 +207,11 @@
     grid-row-start: 1;
     grid-row-end: 5;
     margin-bottom: 0;
+    background-image: url("/img/contacts/map-desktop@1x.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("/img/contacts/map-desktop@2x.png");
+    }
   }
 }
 

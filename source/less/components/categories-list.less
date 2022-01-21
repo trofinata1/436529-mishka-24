@@ -31,8 +31,8 @@
   line-height: 24px;
   color: @font-opposite;
   text-decoration: none;
-  white-space: pre-line;
   background-repeat: no-repeat;
+  white-space: pre-wrap;
 
   @media (min-width: @tablet) {
     padding-left: 36px;
@@ -92,6 +92,11 @@
       padding-top: 18px;
       padding-bottom: 23px;
       box-shadow: @category-shadow-interior;
+
+      @media (min-width: @tablet) {
+        padding-top: 20px;
+        padding-bottom: 30px;
+      }
     }
   }
 
@@ -128,6 +133,11 @@
       padding-top: 16px;
       padding-bottom: 27px;
       box-shadow: @category-shadow-toys;
+
+      @media (min-width: @tablet) {
+        padding-top: 20px;
+        padding-bottom: 32px;
+      }
     }
   }
 }

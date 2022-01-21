@@ -146,11 +146,11 @@
       border-radius: 50%;
     }
 
-    &:hover::before { //В одну строку, иначе Стайллинт ругается на вложенность больше двух
+    &:hover::before {
       border-color: @special-decoration;
     }
 
-    &:active::before { //В одну строку, иначе Стайллинт ругается на вложенность больше двух
+    &:active::before {
       border-color: @font-dark-active;
     }
   }
@@ -508,9 +508,34 @@
     }
   }
 
-  &:not(:placeholder-shown) ~ .form__input-icon {
-    fill: @special-decoration;
-    opacity: 1;
+  &--radio:disabled,
+  &--checkbox:disabled {
+    + .form__label {
+      opacity: 0.3;
+    }
+
+    & + .form__label:hover::before {
+      border-color: @font-base;
+    }
+  }
+
+  &--square:disabled {
+    + .form__label {
+      opacity: 0.3;
+    }
+
+    + .form__label:hover {
+      border-color: @font-base-opacity;
+    }
+  }
+
+  &:not(:placeholder-shown) {
+    border-color: @special-decoration;
+
+    ~ .form__input-icon {
+      fill: @special-decoration;
+      opacity: 1;
+    }
   }
 
   &--radio,
