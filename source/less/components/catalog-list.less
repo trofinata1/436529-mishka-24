@@ -51,15 +51,25 @@
     .card__info {
       box-shadow: @shadow-active;
     }
+
+    .catalog-list__image {
+      outline: transparent;
+    }
   }
 }
 
 .catalog-list__image {
+  box-sizing: border-box;
+
   @media (min-width: @tablet) {
     width: 50%;
   }
 
   @media (min-width: @desktop) {
     width: 100%;
+  }
+
+  &:focus {
+    .outline;
   }
 }
