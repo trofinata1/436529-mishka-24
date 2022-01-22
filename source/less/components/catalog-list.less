@@ -41,7 +41,8 @@
     }
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     .card__info {
       box-shadow: @shadow-hover;
     }
@@ -67,9 +68,5 @@
 
   @media (min-width: @desktop) {
     width: 100%;
-  }
-
-  &:focus {
-    .outline;
   }
 }

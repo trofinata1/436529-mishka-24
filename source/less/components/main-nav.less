@@ -89,7 +89,8 @@
     display: none;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     .main-nav__toggle-line,
     &::before,
     &::after {
@@ -99,10 +100,6 @@
     .main-nav__toggle-line {
       box-shadow: 0 6px 0 0 @special, 0 12px 0 0 @special;
     }
-  }
-
-  &:focus {
-    .outline-radius;
   }
 
   &:active {

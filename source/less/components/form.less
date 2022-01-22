@@ -487,18 +487,13 @@
     }
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     border-color: @special-decoration;
 
     ~ .form__input-icon {
       fill: @special-decoration;
       opacity: 1;
-    }
-  }
-
-  &:focus {
-    + .form__label::before {
-      border-color: @special-link-interaction;
     }
   }
 
@@ -657,12 +652,6 @@
 
     @media (min-width: @tablet) {
       padding-bottom: 8px;
-    }
-  }
-
-  &--square {
-    &:focus + .form__label {
-      border-color: @special-decoration;
     }
   }
 }
