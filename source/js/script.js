@@ -11,14 +11,14 @@ navToggle.addEventListener('click', function() {
 
 var modal = document.querySelector('.modal');
 var order = document.querySelector('.product__button');
-var modalBackground = document.querySelector('.modal__background');
 
-order.addEventListener('click', function() {
+order.addEventListener('click', function(evt) {
+  evt.preventDefault();
   modal.classList.add('modal--active');
 });
 
-modalBackground.addEventListener('click', function(e) {
-  if (e.target) {
+document.addEventListener('keydown', function(evt) {
+  if (evt.keyCode === 27) {
     modal.classList.remove('modal--active');
   }
 });
