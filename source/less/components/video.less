@@ -59,9 +59,9 @@
   }
 
   @media (min-width: @desktop) {
-    margin-top: 47px;
+    margin-top: 46px;
     margin-right: 57px;
-    margin-bottom: 27px;
+    margin-bottom: 26px;
     margin-left: 0;
     padding-top: 48px;
     padding-left: 0;
@@ -74,7 +74,7 @@
   margin: 0;
   padding-top: 30px;
   padding-right: 15px;
-  padding-bottom: 40px;
+  padding-bottom: 41px;
   padding-left: 34px;
   font-size: 13px;
 
@@ -91,86 +91,52 @@
   @media (min-width: @desktop) {
     margin: 0;
     margin-right: 57px;
-    margin-bottom: 51px;
+    margin-bottom: 50px;
   }
 }
 
 .video__button {
   .reset-button;
   position: absolute;
-  top: 133px;
-  left: 50%;
-  width: 100px;
-  height: 76px;
-  margin-left: -50px;
+  left: 0;
+  width: 260px;
+  height: 150px;
   padding: 0;
   background-image: url("/img/video/play.svg");
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-position: center;
+  background-size: 101px 77px;
 
   @media (min-width: @tablet) {
-    top: 189px;
-    width: 102px;
-    height: 78px;
-    margin-left: -51px;
+    width: 668px;
+    height: 455px;
+    background-size: 102px 78px;
   }
 
   @media (min-width: @desktop) {
-    top: 190px;
-    left: 28%;
-    width: 101px;
-    height: 77px;
-    margin-left: 0;
+    background-position: 51% center;
   }
 
   &:hover {
-    top: 123px;
-    width: 120px;
-    height: 91px;
-    margin-left: -60px;
+    opacity: 1;
+    background-size: 121px 92px;
 
     @media (min-width: @tablet) {
-      top: 181px;
-      width: 122px;
-      height: 94px;
-      margin-left: -61px;
-    }
-
-    @media (min-width: @desktop) {
-      top: 182px;
-      left: calc(28% - 10px);
-      width: 121px;
-      height: 92px;
-      margin-left: 0;
+      background-size: 122px 94px;
     }
   }
 
   &:focus {
-    .outline;
-    border-radius: 30px;
+    opacity: 0.8;
+    outline: transparent;
   }
 
   &:active {
-    top: 148px;
-    width: 80px;
-    height: 61px;
-    margin-left: -40px;
-    outline: none;
-    border-radius: 0;
+    opacity: 1;
+    background-size: 81px 62px;
 
     @media (min-width: @tablet) {
-      top: 197px;
-      width: 82px;
-      height: 62px;
-      margin-left: -40px;
-    }
-
-    @media (min-width: @desktop) {
-      top: 198px;
-      left: calc(28% + 10px);
-      width: 81px;
-      height: 62px;
-      margin-left: 0;
+      background-size: 82px 62px;
     }
   }
 }
@@ -195,6 +161,6 @@
     min-width: 230px;
     margin: 0;
     margin-right: 57px;
-    margin-bottom: 60px;
+    margin-bottom: 61px;
   }
 }

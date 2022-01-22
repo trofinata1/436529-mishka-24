@@ -1,4 +1,5 @@
 .site-list {
+  position: relative;
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
@@ -19,13 +20,20 @@
   @media (min-width: @tablet) {
     display: flex;
     align-items: flex-start;
-    height: 100%;
+    align-self: stretch;
     padding: 0;
     box-shadow: none;
   }
 
   @media (min-width: @desktop) {
     box-sizing: border-box;
+  }
+
+  &::after {
+    @media (min-width: @desktop) {
+      .separator-vertical;
+      display: none; //Задается всем элементам списка, т.к. при переполнении кол-вом элементов возможен перенос. Чтобы в этом случае не прерывалась вертикальная линия - включить псевдоэлемент у соответствующего элемента
+    }
   }
 
   &--catalog {
@@ -42,7 +50,7 @@
 
     &::after {
       @media (min-width: @desktop) {
-        .separator-vertical;
+        display: block;
       }
     }
   }
@@ -64,6 +72,8 @@
   }
 
   @media (min-width: @desktop) {
+    box-sizing: border-box;
     padding-top: 33px;
+    padding-bottom: 5px;
   }
 }

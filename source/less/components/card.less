@@ -26,6 +26,7 @@
     margin-bottom: 8px;
 
     @media (min-width: @desktop) {
+      margin-top: 3px;
       margin-bottom: 10px;
     }
   }
@@ -73,7 +74,7 @@
     grid-template-rows: repeat(3, auto);
     height: 100%;
     box-sizing: border-box;
-    padding-top: 25px;
+    padding-top: 27px;
     padding-right: 29px;
     padding-bottom: 22px;
     padding-left: 27px;
@@ -104,6 +105,10 @@
   &--high {
     @media (min-width: @tablet) {
       padding-top: 5px;
+    }
+
+    @media (min-width: @desktop) {
+      padding-top: 0;
     }
   }
 }

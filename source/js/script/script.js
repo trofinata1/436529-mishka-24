@@ -8,3 +8,17 @@ navToggle.addEventListener('click', function() {
     navMain.classList.add('main-nav--opened');
   }
 });
+
+var modal = document.querySelector('.modal');
+var order = document.querySelector('.product__button');
+var modalBackground = document.querySelector('.modal__background');
+
+order.addEventListener('click', function() {
+  modal.classList.add('modal--active');
+});
+
+modalBackground.addEventListener('click', function(e) {
+  if (e.target) {
+    modal.classList.remove('modal--active');
+  }
+});
