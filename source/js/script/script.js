@@ -9,16 +9,23 @@ navToggle.addEventListener('click', function() {
   }
 });
 
-var modal = document.querySelector('.modal');
-var order = document.querySelector('.product__button');
+function modalShow(className) {
+  var modal = document.querySelector('.modal');
+  var order = document.querySelectorAll(className);
+  
+  order.forEach(function(item) {
+    item.addEventListener('click', function(evt) {
+      evt.preventDefault();
+      modal.classList.add('modal--active');
+    });
+  })
 
-order.addEventListener('click', function(evt) {
-  evt.preventDefault();
-  modal.classList.add('modal--active');
-});
+  document.addEventListener('keydown', function(evt) {
+    if (evt.keyCode === 27) {
+      modal.classList.remove('modal--active');
+    }
+  });
+}
 
-document.addEventListener('keydown', function(evt) {
-  if (evt.keyCode === 27) {
-    modal.classList.remove('modal--active');
-  }
-});
+modalShow('.product__button');
+modalShow('.card__button');
