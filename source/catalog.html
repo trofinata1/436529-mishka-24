@@ -207,17 +207,20 @@
   </footer>
   <!-- Модальное окно -->
   <div class="modal">
-    <h2 class="modal__title">Добавить в корзину</h2>
-    <p class="modal__text">Выберите размер:</p>
-    <form class="modal__form form" action="https://echo.htmlacademy.ru/">
-      <input class="form__input form__input--square" type="radio" name="size" id="size-s" value="s" disabled>
-      <label class="form__label form__label--square" for="size-s">S</label>
-      <input class="form__input form__input--square" type="radio" name="size" id="size-m" value="m">
-      <label class="form__label form__label--square" for="size-m">M</label>
-      <input class="form__input form__input--square" type="radio" name="size" id="size-l" value="l">
-      <label class="form__label form__label--square" for="size-l">L</label>
-      <button class="form__button button--color button" type="submit">Добавить</button>
-    </form>
+    <div class="modal__background"></div>
+    <div class="modal__content">
+      <h2 class="modal__title">Добавить в корзину</h2>
+      <p class="modal__text">Выберите размер:</p>
+      <form class="modal__form form" action="https://echo.htmlacademy.ru/">
+        <input class="form__input form__input--square" type="radio" name="size" id="size-s" value="s">
+        <label class="form__label form__label--square" for="size-s">S</label>
+        <input class="form__input form__input--square" type="radio" name="size" id="size-m" value="m">
+        <label class="form__label form__label--square" for="size-m">M</label>
+        <input class="form__input form__input--square" type="radio" name="size" id="size-l" value="l">
+        <label class="form__label form__label--square" for="size-l">L</label>
+        <button class="form__button button--color button" type="submit">Добавить</button>
+      </form>
+    </div>
   </div>
   <script src="/js/script.js"></script>
 </body>
