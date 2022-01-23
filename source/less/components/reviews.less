@@ -13,14 +13,25 @@
     padding-top: 80px;
     padding-bottom: 0;
     padding-left: 50px;
-    background-image: url("/img/bg/bg-review@1x.png");
+    background-image: url("/img/decorations/bg/bg-review@1x.png");
     background-position: top left;
     background-repeat: no-repeat;
     background-size: 350px 457px;
     object-fit: cover;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("/img/bg/bg-review@2x.png");
+      background-image: url("/img/decorations/bg/bg-review@2x.png");
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 350px;
+      height: 457px;
+      background-color: @bg-gray-light;
+      z-index: -1;
     }
   }
 
@@ -109,7 +120,8 @@
     border: none;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-image: none;
     border: @border-light;
 
@@ -123,12 +135,6 @@
 
     &.reviews__arrow-prev {
       border-right: none;
-    }
-  }
-
-  &:focus {
-    .reviews__arrow-icon {
-      opacity: 0.6;
     }
   }
 

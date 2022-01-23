@@ -31,17 +31,18 @@
     margin-right: -5px;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
+    outline: transparent;
+
     .copyright__icon {
       fill: @special-link-interaction;
     }
   }
 
-  &:focus {
-    .outline-radius;
-  }
-
   &:active {
+    outline: transparent;
+
     .copyright__icon {
       fill: @special-link-interaction-active;
     }

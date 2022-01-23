@@ -31,8 +31,8 @@
   line-height: 24px;
   color: @font-opposite;
   text-decoration: none;
-  white-space: pre-line;
   background-repeat: no-repeat;
+  white-space: pre-wrap;
 
   @media (min-width: @tablet) {
     padding-left: 36px;
@@ -40,12 +40,7 @@
     line-height: 30px;
   }
 
-  &:hover {
-    .categories-list__icon {
-      opacity: 0.7;
-    }
-  }
-
+  &:hover,
   &:focus {
     outline: transparent;
 
@@ -71,7 +66,8 @@
       padding-bottom: 25px;
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
       padding-top: 18px;
       padding-bottom: 23px;
       box-shadow: @category-shadow-interior;
@@ -82,16 +78,15 @@
       }
     }
 
-    &:focus {
-      padding-top: 18px;
-      padding-bottom: 23px;
-      box-shadow: @category-shadow-interior;
-    }
-
     &:active {
       padding-top: 18px;
       padding-bottom: 23px;
       box-shadow: @category-shadow-interior;
+
+      @media (min-width: @tablet) {
+        padding-top: 20px;
+        padding-bottom: 30px;
+      }
     }
   }
 
@@ -107,7 +102,8 @@
       padding-bottom: 27px;
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
       padding-top: 16px;
       padding-bottom: 27px;
       box-shadow: @category-shadow-toys;
@@ -118,21 +114,21 @@
       }
     }
 
-    &:focus {
-      padding-top: 16px;
-      padding-bottom: 27px;
-      box-shadow: @category-shadow-toys;
-    }
-
     &:active {
       padding-top: 16px;
       padding-bottom: 27px;
       box-shadow: @category-shadow-toys;
+
+      @media (min-width: @tablet) {
+        padding-top: 20px;
+        padding-bottom: 32px;
+      }
     }
   }
 }
 
 .categories-list__icon {
+  fill: @category-icon;
   opacity: 0.5;
 
   @media (min-width: @tablet) {

@@ -39,18 +39,18 @@
   .flex-center;
   padding: 5px;
 
-  &:hover {
+  &:hover,
+  &:focus {
+    outline: transparent;
+
     .social-list__icon {
       fill: @special-link-interaction;
     }
   }
 
-  &:focus {
-    .outline-radius;
-    fill: @special-link-interaction;
-  }
-
   &:active {
+    outline: transparent;
+
     .social-list__icon {
       fill: @special-link-interaction-active;
     }

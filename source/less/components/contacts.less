@@ -31,7 +31,7 @@
     margin-left: 50px;
     padding-top: 22px;
     padding-bottom: 9px;
-    background-image: url("/img/contacts/flag.svg");
+    background-image: url("/img/decorations/contacts/flag.svg");
     background-position: right;
     background-repeat: no-repeat;
   }
@@ -162,20 +162,17 @@
     text-underline-offset: 13px;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: @special-link-interaction;
     text-decoration-color: @special-link-interaction;
-  }
-
-  &:focus {
-    .outline-radius;
-    color: @special;
-    text-decoration: none;
+    outline: transparent;
   }
 
   &:active {
     color: @special-link-interaction;
     text-decoration-color: @special-link-underline-active;
+    outline: transparent;
   }
 }
 
@@ -183,10 +180,30 @@
   display: block;
   width: 100%;
   margin-bottom: 42px;
+  background-image: image-set(
+    url("/img/content/contacts/map-mobile@1x.webp") 1x,
+    url("/img/content/contacts/map-mobile@1x.png") 1x);
+  background-color: @bg-gray-light;
+  background-repeat: no-repeat;
+
+  @media (min-resolution: 2dppx) {
+    background-image: image-set(
+      url("/img/content/contacts/map-mobile@2x.webp") 2x,
+      url("/img/content/contacts/map-mobile@2x.png") 2x);
+  }
 
   @media (min-width: @tablet) {
     height: 457px;
     margin-bottom: 53px;
+    background-image: image-set(
+      url("/img/content/contacts/map-tablet@1x.webp") 1x,
+      url("/img/content/contacts/map-tablet@1x.png") 1x);
+
+    @media (min-resolution: 2dppx) {
+      background-image: image-set(
+        url("/img/content/contacts/map-tablet@2x.webp") 2x,
+        url("/img/content/contacts/map-tablet@2x.png") 2x);
+    }
   }
 
   @media (min-width: @desktop) {
@@ -195,6 +212,43 @@
     grid-row-start: 1;
     grid-row-end: 5;
     margin-bottom: 0;
+    background-image: image-set(
+      url("/img/content/contacts/map-desktop@1x.webp") 1x,
+      url("/img/content/contacts/map-desktop@1x.png") 1x);
+
+    @media (min-resolution: 2dppx) {
+      background-image: image-set(
+        url("/img/content/contacts/map-desktop@2x.webp") 2x,
+        url("/img/content/contacts/map-desktop@2x.png") 2x);
+    }
+  }
+
+  @supports (
+    background-image: image-set(
+      url("/img/content/contacts/map-mobile@1x.webp") 1x,
+      url("/img/content/contacts/map-mobile@2x.webp") 2x)
+  ) {
+    background-image: image-set(
+      url("/img/content/contacts/map-mobile@1x.webp") 1x,
+      url("/img/content/contacts/map-mobile@1x.png") 1x,
+      url("/img/content/contacts/map-mobile@2x.webp") 2x,
+      url("/img/content/contacts/map-mobile@2x.png") 2x);
+
+    @media (min-width: @tablet) {
+      background-image: image-set(
+        url("/img/content/contacts/map-tablet@1x.webp") 1x,
+        url("/img/content/contacts/map-tablet@1x.png") 1x,
+        url("/img/content/contacts/map-tablet@2x.webp") 2x,
+        url("/img/content/contacts/map-tablet@2x.png") 2x);
+    }
+
+    @media (min-width: @desktop) {
+      background-image: image-set(
+        url("/img/content/contacts/map-desktop@1x.webp") 1x,
+        url("/img/content/contacts/map-desktop@1x.png") 1x,
+        url("/img/content/contacts/map-desktop@2x.webp") 2x,
+        url("/img/content/contacts/map-desktop@2x.png") 2x);
+    }
   }
 }
 
