@@ -59,13 +59,13 @@
   }
 
   @media (min-width: @desktop) {
+    width: 70%;
     margin-top: 46px;
     margin-right: 57px;
     margin-bottom: 26px;
     margin-left: 0;
     padding-top: 48px;
     padding-left: 0;
-    white-space: pre-line;
     background-position: top left;
   }
 }
@@ -99,7 +99,7 @@
   .reset-button;
   position: absolute;
   left: 0;
-  width: 260px;
+  width: 100%;
   height: 150px;
   padding: 0;
   background-image: url("/img/decorations/video/play.svg");
@@ -108,19 +108,24 @@
   background-size: 101px 77px;
 
   @media (min-width: @tablet) {
-    width: 668px;
-    height: 455px;
+    top: 150px;
+    left: 50%;
+    width: 20%;
+    height: 20%;
+    transform: translateX(-50%);
     background-size: 102px 78px;
   }
 
   @media (min-width: @desktop) {
-    background-position: 51% center;
+    top: 180px;
+    left: 340px;
   }
 
   &:hover,
   &:focus {
     opacity: 1;
     background-size: 121px 92px;
+    outline: transparent;
 
     @media (min-width: @tablet) {
       background-size: 122px 94px;
@@ -163,6 +168,6 @@
     min-width: 230px;
     margin: 0;
     margin-right: 57px;
-    margin-bottom: 61px;
+    margin-bottom: 60px;
   }
 }

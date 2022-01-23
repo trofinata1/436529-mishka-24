@@ -146,7 +146,8 @@
       border-radius: 50%;
     }
 
-    &:hover::before {
+    &:hover::before,
+    &:focus::before {
       border-color: @special-decoration;
     }
 
@@ -254,7 +255,7 @@
 
     &::after {
       display: none;
-      background-image: url("/img/form/tick.svg");
+      background-image: url("/img/decorations/form/tick.svg");
       background-repeat: no-repeat;
       background-position: center;
       background-size: 71%;
@@ -487,22 +488,6 @@
     }
   }
 
-  &:hover,
-  &:focus {
-    border-color: @special-decoration;
-
-    ~ .form__input-icon {
-      fill: @special-decoration;
-      opacity: 1;
-    }
-  }
-
-  &:active {
-    + .form__label--square {
-      border-color: @special;
-    }
-  }
-
   &--radio:disabled,
   &--checkbox:disabled {
     + .form__label {
@@ -533,6 +518,22 @@
     }
   }
 
+  &:hover,
+  &:focus {
+    border-color: @special-decoration;
+
+    ~ .form__input-icon {
+      fill: @special-decoration;
+      opacity: 1;
+    }
+  }
+
+  &:active {
+    + .form__label--square {
+      border-color: @special;
+    }
+  }
+
   &--radio,
   &--checkbox,
   &--square {
@@ -559,6 +560,10 @@
       @media (min-width: @desktop) {
         width: 21%;
       }
+    }
+
+    &:focus + .form__label::before {
+      border-color: @special-decoration;
     }
   }
 

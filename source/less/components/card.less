@@ -1,6 +1,16 @@
 .card__link {
   display: block;
   text-decoration: none;
+
+  &:hover,
+  &:focus {
+    outline: transparent;
+    color: @font-dark-hover;
+  }
+
+  &:active {
+    color: @font-dark-active;
+  }
 }
 
 .card__title {
@@ -159,6 +169,8 @@
 
   &:hover,
   &:focus {
+    outline: transparent;
+
     .card__button-icon {
       .icon-hover;
       opacity: 1;
