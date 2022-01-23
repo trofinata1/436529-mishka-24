@@ -27,5 +27,5 @@ function modalShow(className) {
   });
 }
 
-function modalShow('.product__button');
-function modalShow('.card__button');
+modalShow('.product__button');
+modalShow('.card__button');
