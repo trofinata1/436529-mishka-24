@@ -12,7 +12,7 @@ navToggle.addEventListener('click', function() {
 function modalShow(className) {
   var modal = document.querySelector('.modal');
   var order = document.querySelectorAll(className);
-  
+
   order.forEach(function(item) {
     item.addEventListener('click', function(evt) {
       evt.preventDefault();
