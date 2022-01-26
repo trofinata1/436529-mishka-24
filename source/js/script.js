@@ -1,5 +1,5 @@
-var navMain = document.querySelector('.main-nav');
-var navToggle = document.querySelector('.main-nav__toggle');
+const navMain = document.querySelector('.main-nav');
+const navToggle = document.querySelector('.main-nav__toggle');
 
 navToggle.addEventListener('click', function() {
   if (navMain.classList.contains('main-nav--opened')) {
@@ -10,10 +10,10 @@ navToggle.addEventListener('click', function() {
 });
 
 function modalShow(className) {
-  var modal = document.querySelector('.modal');
-  var order = document.querySelectorAll(className);
+  const modal = document.querySelector('.modal');
+  const orders = document.querySelectorAll(className);
 
-  order.forEach(function(item) {
+  orders.forEach(function(item) {
     item.addEventListener('click', function(evt) {
       evt.preventDefault();
       modal.classList.add('modal--active');
@@ -21,7 +21,7 @@ function modalShow(className) {
   })
 
   document.addEventListener('keydown', function(evt) {
-    if (evt.keyCode === 27) {
+    if (evt.key === "Escape") {
       modal.classList.remove('modal--active');
     }
   });
